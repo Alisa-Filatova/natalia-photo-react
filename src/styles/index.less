@@ -1,0 +1,44 @@
+@import 'variables';
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  outline: 0 !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lora', 'Times New Roman', serif;
+  color: #444444;
+  width: 100%;
+  min-width: 320px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: none;
+  font-feature-settings: "pnum" 1, "kern" 1, "liga" 1;
+  box-sizing: border-box;
+  cursor: default;
+  user-select: none;
+  font-weight: 500;
+}
+
+:global(#root) {
+  height: 100%;
+
+  @media (min-width: @screen-sm) {
+    display: flex;
+  }
+}
+
+a {
+  text-decoration-skip: ink;
+}
