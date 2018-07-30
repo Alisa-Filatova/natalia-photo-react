@@ -1,52 +1,62 @@
 import React from "react";
-import Slider from "react-slick";
+import ImageGallery from 'react-image-gallery';
 import './Carousel.less';
 
 const SLIDES = [
   {
-    title: 'Portrait',
+    description: 'Portrait',
     link: '/portrait',
+    original: '/img/slides/4.jpg',
+    thumbnail: '/img/slides/4-mobile.jpg'
   },
   {
-    title: 'Newborn',
+    description: 'Newborn',
     link: '/newborn',
+    original: '/img/slides/2.jpg',
+    thumbnail: '/img/slides/2-mobile.jpg'
   },
   {
-    title: 'Wedding',
+    description: 'Wedding',
     link: '/wedding',
+    original: '/img/slides/3.jpg',
+    thumbnail: '/img/slides/3-mobile.jpg'
   },
   {
-    title: 'Family',
+    description: 'Family',
     link: '/family',
+    original: '/img/slides/1.jpg',
+    thumbnail: '/img/slides/1-mobile.jpg'
   },
   {
-    title: 'Event',
+    description: 'Event',
     link: '/event',
+    original: '/img/slides/5.jpg',
+    thumbnail: '/img/slides/5-mobile.jpg'
   },
   {
-    title: 'Maternity',
+    description: 'Maternity',
     link: '/maternity',
+    original: '/img/slides/6.jpg',
+    thumbnail: '/img/slides/6-mobile.jpg'
   },
 ];
 
+
 export default class Carousel extends React.Component {
+
   render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
     return (
-      <Slider {...settings}>
-        {SLIDES.map((item) => (
-          <div className='slide' key={item.title}>
-            <h3>{item.title}</h3>
-            <a href={item.link}>Browse gallery</a>
-          </div>
-        ))}
-      </Slider>
+      <ImageGallery
+        items={SLIDES}
+        infinite
+        autoPlay
+        slideInterval={8000}
+        slideDuration={600}
+        showBullets
+        showThumbnails={false}
+        showFullscreenButton={false}
+        showPlayButton={false}
+      />
     );
   }
 }

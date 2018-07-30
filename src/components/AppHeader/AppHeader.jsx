@@ -31,7 +31,7 @@ export default class AppHeader extends React.Component {
                 srcset={LogoCompact}
               />
               <img
-                height="250"
+                className="logo"
                 src={Logo}
                 alt="Natalia Biriouk Photography"
               />
@@ -40,7 +40,7 @@ export default class AppHeader extends React.Component {
         </div>
         <nav className="navigation">
           {NAVIGATION.map((item) => (
-            <a key={item} className="navigation__item" href={item.to}>
+            <a key={item} className="navigation-item" href={item.to}>
               {item.title}
             </a>
           ))}

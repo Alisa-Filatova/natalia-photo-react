@@ -1,7 +1,7 @@
 import React from 'react';
 // import { observer } from 'mobx-react';
 import { Helmet } from 'react-helmet';
-import { Route, Switch, RouteComponentProps } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { AppFooter, AppHeader } from './components';
 import Routes from './routes';
 import './App.less';
@@ -18,7 +18,7 @@ export default class App extends React.Component {
         </Helmet>
         <div className="page">
           <AppHeader />
-          <div className="pageContent">
+          <div className="page-content">
             <Switch>
               {Routes.map(route => <Route key={route.path} {...route} />)}
               {/*<Route component={NotFound} />*/}
