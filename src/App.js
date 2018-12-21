@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Route, Switch } from 'react-router-dom';
 import { AppFooter, AppHeader } from './components';
+// import NotFound from './routes';
 import Routes from './routes';
 import './App.less';
 

@@ -6,7 +6,7 @@ import FamilyGallery from './FamilyGallery/FamilyGallery';
 import EventGallery from './EventGallery/EventGallery';
 import MaternityGallery from './MaternityGallery/MaternityGallery';
 import AboutMe from './AboutMe/AboutMe';
-import Contact from './AboutMe/AboutMe';
+import Contact from './Contact/Contact';
 
 const Routes = [
   {
@@ -46,7 +46,7 @@ const Routes = [
   },
   {
     exact: true,
-    path: '/about_me',
+    path: '/about',
     component: AboutMe,
   },
   {
