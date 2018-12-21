@@ -6,5 +6,4 @@ export default class NewBornGallery extends React.Component {
   render() {
     return <Gallery images={NEWBORN} enableImageSelection={false} rowHeight={300} />;
   }
-
 }

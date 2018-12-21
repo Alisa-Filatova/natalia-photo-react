@@ -6,5 +6,4 @@ export default class EventGallery extends React.Component {
   render() {
     return <Gallery images={EVENT} enableImageSelection={false} rowHeight={300} />;
   }
-
 }
