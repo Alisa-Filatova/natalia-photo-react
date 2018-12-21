@@ -24,11 +24,11 @@ export default class AppHeader extends React.Component {
             <picture>
               <source
                 media="(max-width:425px)"
-                srcset={LogoCompactXs}
+                srcSet={LogoCompactXs}
               />
               <source
                 media="(max-width:768px)"
-                srcset={LogoCompact}
+                srcSet={LogoCompact}
               />
               <img
                 className="logo"
@@ -40,7 +40,7 @@ export default class AppHeader extends React.Component {
         </div>
         <nav className="navigation">
           {NAVIGATION.map((item) => (
-            <a key={item} className="navigation-item" href={item.to}>
+            <a key={item.title} className="navigation-item" href={item.to}>
               {item.title}
             </a>
           ))}
