@@ -1,5 +1,5 @@
 import React from 'react';
-import Gallery from 'react-grid-gallery';
+import { Gallery }  from '../../components';
 const EVENT = require('./event.json');
 
 export default class EventGallery extends React.Component {

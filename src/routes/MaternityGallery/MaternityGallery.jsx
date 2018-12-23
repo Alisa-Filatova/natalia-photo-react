@@ -1,5 +1,5 @@
 import React from "react";
-import Gallery from 'react-grid-gallery';
+import { Gallery }  from '../../components';
 const MATERNITY = require('./maternity.json');
 
 export default class MaternityGallery extends React.Component {

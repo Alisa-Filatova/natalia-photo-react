@@ -1,5 +1,5 @@
 import React from 'react';
-import Gallery from 'react-grid-gallery';
+import { Gallery }  from '../../components';
 const NEWBORN = require('./newborn.json');
 
 export default class NewBornGallery extends React.Component {
