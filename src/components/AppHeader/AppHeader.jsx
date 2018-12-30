@@ -20,7 +20,7 @@ export default class AppHeader extends React.Component {
     return (
       <header className="root">
         <div className="header">
-          <a className="logo" href="/">
+          <a className="logo" href="/home">
             <picture>
               <source
                 media="(max-width:425px)"

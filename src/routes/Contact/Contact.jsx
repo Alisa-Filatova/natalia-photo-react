@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactForm } from '../../components'
+import { ContactForm } from '../../components';
 
 export default class Contact extends React.Component {
   render() {
