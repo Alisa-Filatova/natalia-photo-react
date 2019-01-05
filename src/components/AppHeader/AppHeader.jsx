@@ -1,26 +1,17 @@
 import React from 'react';
+import { observer } from 'mobx-react';
+import { NavLink } from 'react-router-dom';
+import Routes from '../../routes';
 import { Logo, LogoCompact, LogoCompactXs } from '../../SvgImage';
 import './AppHeader.less';
 
-export default class AppHeader extends React.Component {
+class AppHeader extends React.Component {
 
   render() {
-    const NAVIGATION = [
-      { to: '/home', title: 'Home' },
-      { to: '/portrait', title: 'Portrait' },
-      { to: '/newborn', title: 'Newborn' },
-      { to: '/wedding', title: 'Wedding' },
-      { to: '/family', title: 'Family' },
-      { to: '/event', title: 'Event' },
-      { to: '/maternity', title: 'Maternity' },
-      { to: '/about', title: 'About me' },
-      { to: '/contact', title: 'Contact' },
-    ];
-
     return (
       <header className="root">
         <div className="header">
-          <a className="logo" href="/home">
+          <NavLink className="logo" to={Routes[0].path}>
             <picture>
               <source
                 media="(max-width:425px)"
@@ -36,16 +27,11 @@ export default class AppHeader extends React.Component {
                 alt="Natalia Biriouk Photography"
               />
             </picture>
-          </a>
+          </NavLink>
         </div>
-        <nav className="navigation">
-          {NAVIGATION.map((item) => (
-            <a key={item.title} className="navigation-item" href={item.to}>
-              {item.title}
-            </a>
-          ))}
-        </nav>
       </header>
     );
   }
 }
+
+export default observer(AppHeader)

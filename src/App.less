@@ -28,3 +28,25 @@
     flex: 1 1 auto;
   }
 }
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-item {
+  text-decoration: none;
+  color: #444444;
+  font-size: 17px;
+  padding: 15px 10px;
+  transition: color 0.2s linear;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &.selected {
+    color: #cd3e72;
+  }
+}

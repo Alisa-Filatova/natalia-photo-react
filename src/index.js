@@ -9,7 +9,7 @@ ReactDOM.render(
   <Fragment>
     <BrowserRouter>
       <Route
-        path={`/`}
+        path='/'
         render={() => <App /> }
       />
     </BrowserRouter>

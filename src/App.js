@@ -1,13 +1,13 @@
 import React from 'react';
-// import { observer } from 'mobx-react';
+import { observer } from 'mobx-react';
 import { Helmet } from 'react-helmet';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import { AppFooter, AppHeader } from './components';
-// import NotFound from './routes';
+import NotFound from './routes/NotFound/NotFound';
 import Routes from './routes';
 import './App.less';
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <div className="main">
@@ -20,9 +20,21 @@ export default class App extends React.Component {
         <div className="page">
           <AppHeader />
           <div className="page-content">
+						<nav className="navigation">
+							{Routes.map((item) => (
+								<Link
+									key={item.title}
+									className="navigation-item"
+									to={item.path}
+									activeClassName="selected"
+								>
+									{item.title}
+								</Link>
+							))}
+						</nav>
             <Switch>
-              {Routes.map(route => <Route key={route.path} {...route} />)}
-              {/*<Route component={NotFound} />*/}
+              {Routes.map(route => <Route key={route.path} component={route.component} path={route.path} exact={route.exact} />)}
+              <Route component={NotFound} />
             </Switch>
           </div>
           <AppFooter />
@@ -31,3 +43,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default observer(App);

@@ -11,48 +11,49 @@ import Contact from './Contact/Contact';
 const Routes = [
   {
     exact: true,
-    path: '/home',
+    path: '/',
     component: Home,
+    title: 'Home',
   },
   {
-    exact: true,
     path: '/portrait',
     component: PortraitGallery,
+    title: 'Portrait'
   },
   {
-    exact: true,
     path: '/newborn',
     component: NewBornGallery,
+    title: 'Newborn',
   },
   {
-    exact: true,
     path: '/wedding',
     component: WeddingGallery,
+    title: 'Wedding'
   },
   {
-    exact: true,
     path: '/family',
     component: FamilyGallery,
+    title: 'Family',
   },
   {
-    exact: true,
     path: '/event',
     component: EventGallery,
+    title: 'Event',
   },
   {
-    exact: true,
     path: '/maternity',
     component: MaternityGallery,
+    title: 'Maternity',
   },
   {
-    exact: true,
     path: '/about',
     component: AboutMe,
+    title: 'About me',
   },
   {
-    exact: true,
     path: '/contact',
     component: Contact,
+    title: 'Contact',
   },
 ];
 

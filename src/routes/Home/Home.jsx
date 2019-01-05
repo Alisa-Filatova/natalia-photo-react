@@ -1,7 +1,8 @@
 import React from 'react';
+import { observer } from 'mobx-react';
 import { Carousel } from '../../components';
 
-export default class Home extends React.Component {
+class Home extends React.Component {
 
   render() {
     return (
@@ -12,3 +13,5 @@ export default class Home extends React.Component {
   }
 
 }
+
+export default observer(Home);
