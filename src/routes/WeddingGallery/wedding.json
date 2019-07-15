@@ -40,11 +40,6 @@
     "thumbnailHeight": 300
   },
   {
-    "src": "img/wedding-gallery/large/9.jpg",
-    "thumbnail": "img/wedding-gallery/small/9.jpg",
-    "thumbnailHeight": 300
-  },
-  {
     "src": "img/wedding-gallery/large/10.jpg",
     "thumbnail": "img/wedding-gallery/small/10.jpg",
     "thumbnailHeight": 300
@@ -82,11 +77,6 @@
   {
     "src": "img/wedding-gallery/large/17.jpg",
     "thumbnail": "img/wedding-gallery/small/17.jpg",
-    "thumbnailHeight": 300
-  },
-  {
-    "src": "img/wedding-gallery/large/18.jpg",
-    "thumbnail": "img/wedding-gallery/small/18.jpg",
     "thumbnailHeight": 300
   }
 ]
