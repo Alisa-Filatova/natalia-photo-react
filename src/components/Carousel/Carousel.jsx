@@ -41,22 +41,18 @@ const SLIDES = [
   },
 ];
 
+const Carousel = () => (
+  <ImageGallery
+    items={SLIDES}
+    infinite
+    autoPlay
+    slideInterval={8000}
+    slideDuration={600}
+    showBullets
+    showThumbnails={false}
+    showFullscreenButton={false}
+    showPlayButton={false}
+  />
+);
 
-export default class Carousel extends React.Component {
-
-  render() {
-    return (
-      <ImageGallery
-        items={SLIDES}
-        infinite
-        autoPlay
-        slideInterval={8000}
-        slideDuration={600}
-        showBullets
-        showThumbnails={false}
-        showFullscreenButton={false}
-        showPlayButton={false}
-      />
-    );
-  }
-}
+export default Carousel;

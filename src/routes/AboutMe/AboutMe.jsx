@@ -1,50 +1,48 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './AboutMe.less';
 const photo = require('./about-desktop.jpg');
 
-export default class AboutMe extends React.Component {
-  render() {
-    return (
-      <section className="about-me">
-        <div className="about-me__description">
-        <h2 className="about-me__title">Hello, I am Natalia! Welcome to my world!</h2>
-        <p className="about-me__text">
-          I am a creative newborn, children, family portrait and wedding
-          photographer based in a beautiful nature in California that
-          enjoys working at home!<br/>
-          I have shot children, family portraits and other events all over the California.
-        </p>
-        <p className="about-me__text">
-          I am a happy, creative person that loves to make beautiful, natural,
-          soft, romantic and thoughtful images that reflect my artistic style.<br/>
-          I am a wife to one of americans finest, a mum to a two beautiful girls
-          who is a sucker for a good love story, ( I have been known to cry at many
-          films! You may even notice I often shed a few tears
-          behind my camera when capturing people in love! ).<br/>
-          I love a happy home full of flowers, candles, laughter, life and
-          lots of music.
-        </p>
-        <p className="about-me__text">
-          After working hard to get better and better with my camera,
-          I decided to turn my passion of photography into a business.
-          I never get tired of capturing a family's love or hearing the laughs of
-          children after they are done with a silly pose, or the look I see in a
-          client's face after handing over their images.
-          I hope that one day soon, I will be able to bring my love of photos into
-          your home that will fill you with tiny, captured memories that will last
-          a lifetime...
-        </p>
-        <p className="about-me__text">
-          Please feel free to look through my portfolio for a taste of my work.
-          If you are interested in booking a shoot, please just drop me a message on my
-          <a className="base-link about-me__link" href='/contact'>Contact</a> page.
-        </p>
-        </div>
-        <div className="about-me__photo-box">
-          <img className="about-me__photo" src={photo} alt="" />
-        </div>
-      </section>
-    );
-  }
+const AboutMe = () => (
+  <section className="about-me">
+    <div className="about-me__description">
+    <h2 className="about-me__title">Hello, I am Natalia! Welcome to my world!</h2>
+    <p className="about-me__text">
+      I am a creative newborn, children, family portrait and wedding
+      photographer based in a beautiful nature in California that
+      enjoys working at home!<br/>
+      I have shot children, family portraits and other events all over the California.
+    </p>
+    <p className="about-me__text">
+      I am a happy, creative person that loves to make beautiful, natural,
+      soft, romantic and thoughtful images that reflect my artistic style.<br/>
+      I am a wife to one of americans finest, a mum to a two beautiful girls
+      who is a sucker for a good love story, ( I have been known to cry at many
+      films! You may even notice I often shed a few tears
+      behind my camera when capturing people in love! ).<br/>
+      I love a happy home full of flowers, candles, laughter, life and
+      lots of music.
+    </p>
+    <p className="about-me__text">
+      After working hard to get better and better with my camera,
+      I decided to turn my passion of photography into a business.
+      I never get tired of capturing a family's love or hearing the laughs of
+      children after they are done with a silly pose, or the look I see in a
+      client's face after handing over their images.
+      I hope that one day soon, I will be able to bring my love of photos into
+      your home that will fill you with tiny, captured memories that will last
+      a lifetime...
+    </p>
+    <p className="about-me__text">
+      Please feel free to look through my portfolio for a taste of my work.
+      If you are interested in booking a shoot, please just drop me a message on
+      my <NavLink className="base-link about-me__link" to='/contact'>Contact</NavLink> page.
+    </p>
+    </div>
+    <div className="about-me__photo-box">
+      <img className="about-me__photo" src={photo} alt="" />
+    </div>
+  </section>
+);
 
-}
+export default AboutMe;

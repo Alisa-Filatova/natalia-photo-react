@@ -62,6 +62,6 @@ export default class ContactForm extends React.Component {
           text="Send message"
         />
       </form>
-      );
+    );
   }
 }

@@ -1,17 +1,15 @@
 import React from 'react';
 import './Button.less';
 
-export default class Button extends React.Component {
-	render() {
-		return (
-			<button
-				className={`btn ${this.props.className}`}
-				onClick={this.props.onClick}
-				type={this.props.type}
-				name={this.props.name}
-			>
-				{this.props.text}
-			</button>
-		);
-	}
-}
+const Button = (props) => (
+	<button
+		className={`btn ${props.className}`}
+		onClick={props.onClick}
+		type={props.type}
+		name={props.name}
+	>
+		{props.text}
+	</button>
+);
+
+export default Button;
