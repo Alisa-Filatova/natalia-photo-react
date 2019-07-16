@@ -1,12 +1,22 @@
 [
   {
-  "src": "img/family-gallery/large/1.jpg",
-  "thumbnail": "img/family-gallery/small/1.jpg",
-  "thumbnailHeight": 300
-},
+    "src": "img/family-gallery/large/1.jpg",
+    "thumbnail": "img/family-gallery/small/1.jpg",
+    "thumbnailHeight": 300
+  },
   {
-    "src": "img/family-gallery/large/2.jpg",
-    "thumbnail": "img/family-gallery/small/2.jpg",
+    "src": "img/family-gallery/large/8.jpg",
+    "thumbnail": "img/family-gallery/small/8.jpg",
+    "thumbnailHeight": 300
+  },
+  {
+    "src": "img/family-gallery/large/11.jpg",
+    "thumbnail": "img/family-gallery/small/11.jpg",
+    "thumbnailHeight": 300
+  },
+  {
+    "src": "img/family-gallery/large/28.jpg",
+    "thumbnail": "img/family-gallery/small/28.jpg",
     "thumbnailHeight": 300
   },
   {
@@ -15,8 +25,18 @@
     "thumbnailHeight": 300
   },
   {
+    "src": "img/family-gallery/large/19.jpg",
+    "thumbnail": "img/family-gallery/small/19.jpg",
+    "thumbnailHeight": 300
+  },
+  {
     "src": "img/family-gallery/large/4.jpg",
     "thumbnail": "img/family-gallery/small/4.jpg",
+    "thumbnailHeight": 300
+  },
+  {
+    "src": "img/family-gallery/large/2.jpg",
+    "thumbnail": "img/family-gallery/small/2.jpg",
     "thumbnailHeight": 300
   },
   {
@@ -35,11 +55,6 @@
     "thumbnailHeight": 300
   },
   {
-    "src": "img/family-gallery/large/8.jpg",
-    "thumbnail": "img/family-gallery/small/8.jpg",
-    "thumbnailHeight": 300
-  },
-  {
     "src": "img/family-gallery/large/9.jpg",
     "thumbnail": "img/family-gallery/small/9.jpg",
     "thumbnailHeight": 300
@@ -49,11 +64,7 @@
     "thumbnail": "img/family-gallery/small/10.jpg",
     "thumbnailHeight": 300
   },
-  {
-    "src": "img/family-gallery/large/11.jpg",
-    "thumbnail": "img/family-gallery/small/11.jpg",
-    "thumbnailHeight": 300
-  },
+
   {
     "src": "img/family-gallery/large/12.jpg",
     "thumbnail": "img/family-gallery/small/12.jpg",
@@ -87,11 +98,6 @@
   {
     "src": "img/family-gallery/large/18.jpg",
     "thumbnail": "img/family-gallery/small/18.jpg",
-    "thumbnailHeight": 300
-  },
-  {
-    "src": "img/family-gallery/large/19.jpg",
-    "thumbnail": "img/family-gallery/small/19.jpg",
     "thumbnailHeight": 300
   },
   {
@@ -132,11 +138,6 @@
   {
     "src": "img/family-gallery/large/27.jpg",
     "thumbnail": "img/family-gallery/small/27.jpg",
-    "thumbnailHeight": 300
-  },
-  {
-    "src": "img/family-gallery/large/28.jpg",
-    "thumbnail": "img/family-gallery/small/28.jpg",
     "thumbnailHeight": 300
   },
   {
