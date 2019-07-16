@@ -1,6 +1,6 @@
 import React from 'react';
 import { Gallery }  from '../../components';
-const PORTRAIT = require('./portrait.json');
+import PORTRAIT from './portrait.json';
 
 const PortraitGallery = () => (
   <Gallery

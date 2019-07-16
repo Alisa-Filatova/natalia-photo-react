@@ -1,6 +1,6 @@
 import React from 'react';
 import Gallery from 'react-grid-gallery';
-const WEDDING = require('./wedding.json');
+import WEDDING from './wedding.json';
 
 const WeddingGallery = () => (
   <Gallery

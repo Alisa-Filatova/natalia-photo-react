@@ -1,6 +1,6 @@
 import React from 'react';
 import { Gallery }  from '../../components';
-const NEWBORN = require('./newborn.json');
+import NEWBORN from './newborn.json';
 
 const NewBornGallery = () => (
   <Gallery

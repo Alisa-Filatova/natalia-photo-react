@@ -1,11 +1,11 @@
-const Logo = require('./logo.svg');
-const LogoCompact = require('./logo-compact.svg');
-const LogoCompactXs = require('./logo-compact-xs.svg');
-const FooterFlowers = require('./footer.svg');
-const Phone = require('./phone.svg');
-const Mail = require('./mail.svg');
-const Sign = require('./sign.svg');
-const Post =  require('./post.svg');
+const Logo = require('../components/AppHeader/images/logo.svg');
+const LogoCompact = require('../components/AppHeader/images/logo-compact.svg');
+const LogoCompactXs = require('../components/AppHeader/images/logo-compact-xs.svg');
+const FooterFlowers = require('../components/AppFooter/footer.svg');
+const Phone = require('../routes/Contact/images/phone.svg');
+const Mail = require('../routes/Contact/images/mail.svg');
+const Sign = require('../routes/Contact/images/sign.svg');
+const Post =  require('../routes/Contact/images/post.svg');
 
 export {
   Logo,

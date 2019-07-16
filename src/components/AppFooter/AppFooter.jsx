@@ -1,5 +1,5 @@
 import React from 'react';
-import { FooterFlowers } from '../../SvgImage';
+import FooterFlowers from './footer.svg';
 import './AppFooter.less';
 
 const AppFooter = () => (

@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './AboutMe.less';
-const photo = require('./about-desktop.jpg');
+import Photo from './about-desktop.jpg';
+import Routes from "../index";
 
 const AboutMe = () => (
   <section className="about-me">
@@ -36,11 +37,11 @@ const AboutMe = () => (
     <p className="about-me__text">
       Please feel free to look through my portfolio for a taste of my work.
       If you are interested in booking a shoot, please just drop me a message on
-      my <NavLink className="base-link about-me__link" to='/contact'>Contact</NavLink> page.
+      my <NavLink className="base-link about-me__link" to={Routes[8].path}>Contact</NavLink> page.
     </p>
     </div>
     <div className="about-me__photo-box">
-      <img className="about-me__photo" src={photo} alt="" />
+      <img className="about-me__photo" src={Photo} alt="" />
     </div>
   </section>
 );

@@ -1,6 +1,6 @@
 import React from 'react';
 import './NotFound.less';
-const Page404 = require('./404.png');
+import Page404 from './404.png';
 
 const NotFound = () => (
   <div className="page__not-found-root">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Gallery }  from '../../components';
-const MATERNITY = require('./maternity.json');
+import MATERNITY from './maternity.json';
 
 const MaternityGallery = () => (
   <Gallery

@@ -1,7 +1,13 @@
 import React from 'react';
 import { ContactForm } from '../../components';
-import { Post, Sign, Phone, Mail } from '../../SvgImage';
+import Post from './images/post.svg';
+import Phone from './images/phone.svg';
+import Mail from './images/mail.svg';
+import Sign from './images/sign.svg';
 import './Contact.less';
+
+const PHONE_NUMBER = '7-609-164-258';
+const EMAIL = 'nata_vis@mail.ru';
 
 const Contact = () => (
   <div className="contact">
@@ -19,20 +25,40 @@ const Contact = () => (
         Other ways to get in touch and connect:
       </p>
       <p className="contact__text">
-        <a className="base-link" href="tel:4104935920">
-          <img className="icon icon_phone" src={Phone} alt="" width="20" height="40" />
-          7-609-164-258
+        <a className="base-link" href="tel:7609164258">
+          <img
+            className="icon icon_phone"
+            src={Phone}
+            alt=""
+            width="20"
+            height="40"
+          />
+          {PHONE_NUMBER}
         </a>
       </p>
       <p className="contact__text">
-        <a className="base-link" href="mailto:natalia.biriouk@gmail.com">
-          <img className="icon icon_mail" src={Mail} alt="" width="30" height="20" />
-          nata_vis@mail.ru
+        <a className="base-link" href={`mailto:${EMAIL}`}>
+          <img
+            className="icon icon_mail"
+            src={Mail}
+            alt=""
+            width="30"
+            height="20"
+          />
+          {EMAIL}
         </a>
       </p>
       <div>
-        <img className="icon icon_post" src={Post} alt="" width="250" />
-        <img className="icon icon_sign" src={Sign} alt="" width="200" />
+        <img
+          src={Post}
+          alt=""
+          width="250"
+        />
+        <img
+          src={Sign}
+          alt=""
+          width="200"
+        />
       </div>
     </div>
     <ContactForm />

@@ -1,13 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Routes from '../../routes';
-import { Logo, LogoCompact, LogoCompactXs } from '../../SvgImage';
+import Logo from './images/logo.svg';
+import LogoCompact from './images/logo-compact.svg';
+import LogoCompactXs from './images/logo-compact-xs.svg';
 import './AppHeader.less';
 
 const AppHeader = () => (
   <header className="root">
     <div className="header">
-      <NavLink className="logo" to={Routes[0].path}>
+      <NavLink
+        className="logo"
+        to={Routes[0].path}
+      >
         <picture>
           <source
             media="(max-width:425px)"
@@ -27,6 +32,5 @@ const AppHeader = () => (
     </div>
   </header>
 );
-
 
 export default AppHeader;

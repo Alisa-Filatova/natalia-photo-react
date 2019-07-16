@@ -1,6 +1,6 @@
 import React from 'react';
 import { Gallery }  from '../../components';
-const FAMILY = require('./family.json');
+import FAMILY from './family.json';
 
 const FamilyGallery = () => (
   <Gallery

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Gallery }  from '../../components';
-const EVENT = require('./event.json');
+import EVENT from './event.json';
 
 const EventGallery = () => (
   <Gallery
