@@ -1,7 +1,7 @@
 [
   {
-    "src": "img/event-gallery/large/1.jpg",
-    "thumbnail": "img/event-gallery/small/1.jpg",
+    "src": "img/event-gallery/large/5.jpg",
+    "thumbnail": "img/event-gallery/small/5.jpg",
     "thumbnailHeight": 300
   },
   {
@@ -10,23 +10,13 @@
     "thumbnailHeight": 300
   },
   {
-    "src": "img/event-gallery/large/3.jpg",
-    "thumbnail": "img/event-gallery/small/3.jpg",
+    "src": "img/event-gallery/large/6.jpg",
+    "thumbnail": "img/event-gallery/small/6.jpg",
     "thumbnailHeight": 300
   },
   {
     "src": "img/event-gallery/large/4.jpg",
     "thumbnail": "img/event-gallery/small/4.jpg",
-    "thumbnailHeight": 300
-  },
-  {
-    "src": "img/event-gallery/large/5.jpg",
-    "thumbnail": "img/event-gallery/small/5.jpg",
-    "thumbnailHeight": 300
-  },
-  {
-    "src": "img/event-gallery/large/6.jpg",
-    "thumbnail": "img/event-gallery/small/6.jpg",
     "thumbnailHeight": 300
   },
   {
@@ -60,8 +50,18 @@
     "thumbnailHeight": 300
   },
   {
+    "src": "img/event-gallery/large/1.jpg",
+    "thumbnail": "img/event-gallery/small/1.jpg",
+    "thumbnailHeight": 300
+  },
+  {
     "src": "img/event-gallery/large/13.jpg",
     "thumbnail": "img/event-gallery/small/13.jpg",
+    "thumbnailHeight": 300
+  },
+  {
+    "src": "img/event-gallery/large/3.jpg",
+    "thumbnail": "img/event-gallery/small/3.jpg",
     "thumbnailHeight": 300
   },
   {

@@ -41,6 +41,8 @@ const SLIDES = [
   },
 ];
 
+
+
 const Carousel = () => (
   <ImageGallery
     items={SLIDES}

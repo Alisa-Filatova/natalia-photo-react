@@ -11,5 +11,15 @@
     object-position: top;
     width: 100%;
     height: 100%;
+    animation: fade-in 0.5s ease-in;
   }
+
+  img:nth-child(even) {
+    animation: fade-in 0.9s ease-in;
+  }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
