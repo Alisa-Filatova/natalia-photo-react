@@ -1,10 +1,13 @@
+@import '../../styles/variables';
+@import '../../styles/index';
+
 .ReactGridGallery {
   display: flex;
   flex-wrap: wrap;
 }
 
 .tile {
-  flex: 1 1 24%;
+  flex: 1 1 48%;
 
   img {
     object-fit: cover;
@@ -16,6 +19,14 @@
 
   img:nth-child(even) {
     animation: fade-in 0.9s ease-in;
+  }
+
+  @media (min-width: @screen-xs) {
+    flex: 1 1 48%;
+  }
+
+  @media (min-width: @screen-sm) {
+    flex: 1 1 24%;
   }
 }
 

@@ -1,7 +1,18 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
+@import '../../styles/variables';
+@import '../../styles/index';
+
 
 .image-gallery-slide {
-  height: 500px;
+  height: 150px;
   overflow: hidden;
   cursor: pointer;
+
+  @media (min-width: @screen-sm) {
+    height: 300px;
+  }
+
+  @media (min-width: @screen-md) {
+    height: 500px;
+  }
 }

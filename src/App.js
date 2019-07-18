@@ -40,6 +40,15 @@ class App extends React.PureComponent {
               Close
             </button>
           )}
+          {!isOpenMenu && (
+            <button
+              className="menu-open main-nav__menu-open"
+              type="button"
+              onClick={this.onMenuButtonClick}
+            >
+              Menu
+            </button>
+          )}
           <div className="page-content">
             <nav className={`navigation ${isOpenMenu && `navigation_open`}`}>
               {Routes.map((item) => (
@@ -53,15 +62,6 @@ class App extends React.PureComponent {
                 </Link>
               ))}
             </nav>
-            {!isOpenMenu && (
-              <button
-                className="menu-open main-nav__menu-open"
-                type="button"
-                onClick={this.onMenuButtonClick}
-              >
-                Menu
-              </button>
-            )}
             <Switch>
               {Routes.map(route => (
                 <Route
