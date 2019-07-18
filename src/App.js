@@ -7,7 +7,20 @@ import Routes from './routes';
 import './App.less';
 
 class App extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpenMenu: false,
+    }
+  }
+
+  onMenuButtonClick = () => {
+    this.setState({ isOpenMenu: !this.state.isOpenMenu})
+  };
+
   render() {
+    const { isOpenMenu } = this.state;
+
     return (
       <div className="main">
         <Helmet>
@@ -18,18 +31,37 @@ class App extends React.PureComponent {
         </Helmet>
         <div className="page">
           <AppHeader />
+          {isOpenMenu && (
+            <button
+              className="close-btn main-nav__close-btn"
+              type="button"
+              onClick={this.onMenuButtonClick}
+            >
+              Close
+            </button>
+          )}
           <div className="page-content">
-            <nav className="navigation">
+            <nav className={`navigation ${isOpenMenu && `navigation_open`}`}>
               {Routes.map((item) => (
                 <Link
                   key={item.title}
-                  className={`navigation-item ${item.path === this.props.location.pathname && `selected`}`}
+                  className={`navigation__item ${item.path === this.props.location.pathname && `selected`}`}
                   to={item.path}
+                  onClick={this.onMenuButtonClick}
                 >
                   {item.title}
                 </Link>
               ))}
             </nav>
+            {!isOpenMenu && (
+              <button
+                className="menu-open main-nav__menu-open"
+                type="button"
+                onClick={this.onMenuButtonClick}
+              >
+                Menu
+              </button>
+            )}
             <Switch>
               {Routes.map(route => (
                 <Route
