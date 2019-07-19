@@ -27,7 +27,7 @@ class App extends React.PureComponent {
           <title>Natalia Biriouk - Photography</title>
           <meta name="description" content="Natalia Biriouk Photography in California!" />
           <meta name="keywords" content="Natalia Biriouk photography California USA Wedding Newborn Event portfolio portrait photo photoshoot family images" />
-          <meta name="author" content="Alisa Filatova, alicedesign.site" />
+          <meta name="author" content="Alisa Filatova, alicedesign.ru" />
         </Helmet>
         <div className="page">
           <AppHeader />

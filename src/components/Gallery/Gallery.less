@@ -7,7 +7,7 @@
 }
 
 .tile {
-  flex: 1 1 48%;
+  flex: 1 1 100%;
 
   img {
     object-fit: cover;
@@ -21,11 +21,15 @@
     animation: fade-in 0.9s ease-in;
   }
 
-  @media (min-width: @screen-xs) {
+  @media (min-width: @screen-sm) {
     flex: 1 1 48%;
   }
 
-  @media (min-width: @screen-sm) {
+  @media (min-width: @screen-md) {
+    flex: 1 1 32%;
+  }
+
+  @media (min-width: @screen-lg) {
     flex: 1 1 24%;
   }
 }
