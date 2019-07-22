@@ -27,14 +27,15 @@
     top: 0;
     padding: 0;
     width: 100%;
-    z-index: 1500;
+    z-index: @app-menu-zindex;
   }
 
   @media (min-width: @screen-md) {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
     position: relative;
-    line-height: 27px;
+    line-height: 26px;
     padding: 5px 0 5px;
     width: 100%;
     margin: 0 auto auto;
@@ -44,12 +45,11 @@
       color: @font-color;
       padding: 15px 10px;
       transition: color 0.2s linear;
-
-      line-height: 54px;
       border: none;
       font-size: 18px;
 
       &:active,
+      &:hover,
       &.selected {
         color: @pink;
         text-decoration: none;
@@ -57,12 +57,6 @@
 
       &:hover {
         opacity: 0.6;
-        color: @pink;
-        text-decoration: none;
-      }
-
-      &:active {
-        color: @pink;
       }
     }
   }
