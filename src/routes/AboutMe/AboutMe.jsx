@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Photo from './about-desktop.png';
+import Routes from '../index';
 import './AboutMe.less';
-import Photo from './about-desktop.jpg';
-import Routes from "../index";
 
 const AboutMe = () => (
   <section className="about-me">

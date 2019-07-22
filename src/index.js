@@ -8,7 +8,7 @@ import './styles/index.less';
 ReactDOM.render(
   <Fragment>
     <BrowserRouter>
-      <App/>
+      <App />
     </BrowserRouter>
   </Fragment>, document.getElementById('root')
 );

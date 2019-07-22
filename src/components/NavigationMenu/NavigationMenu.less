@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+
+.navigation {
+  display: none;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 0;
+  line-height: 52px;
+  list-style: none;
+
+  &__item {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(18, 16, 33, 0.09);
+    display: block;
+    font-size: 21px;
+    font-weight: 500;
+    padding: 4px 100px;
+  }
+
+  &_open {
+    display: flex;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 1500;
+  }
+
+  @media (min-width: @screen-md) {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    line-height: 27px;
+    padding: 5px 0 5px;
+    width: 100%;
+    margin: 0 auto auto;
+
+    &__item {
+      text-decoration: none;
+      color: @font-color;
+      padding: 15px 10px;
+      transition: color 0.2s linear;
+
+      line-height: 54px;
+      border: none;
+      font-size: 18px;
+
+      &:active,
+      &.selected {
+        color: @pink;
+        text-decoration: none;
+      }
+
+      &:hover {
+        opacity: 0.6;
+        color: @pink;
+        text-decoration: none;
+      }
+
+      &:active {
+        color: @pink;
+      }
+    }
+  }
+}
+

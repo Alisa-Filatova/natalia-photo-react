@@ -5,6 +5,8 @@ import ContactForm from './ContactForm/ContactForm';
 import Gallery from './Gallery/Gallery';
 import Button from './Button/Button';
 import Input from './Input/Input';
+import NavigationMenu from './NavigationMenu/NavigationMenu';
+import MobileMenuSwitcher from './MobileMenuSwitcher/MobileMenuSwitcher';
 
 export {
   AppFooter,
@@ -14,4 +16,6 @@ export {
 	Gallery,
 	Button,
 	Input,
+  NavigationMenu,
+  MobileMenuSwitcher,
 };

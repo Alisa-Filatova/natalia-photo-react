@@ -1,304 +1,179 @@
-@import "~react-image-gallery/styles/css/image-gallery.css";
-@import "~react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
+@import '~react-image-gallery/styles/css/image-gallery.css';
+@import '~react-bootstrap-carousel/dist/react-bootstrap-carousel.css';
 @import '../../styles/variables';
 @import '../../styles/index';
 
-.image-gallery-slide {
-  height: 150px;
-  overflow: hidden;
-  cursor: pointer;
-
-  @media (min-width: @screen-sm) {
-    height: 300px;
-  }
-
-  @media (min-width: @screen-md) {
-    height: 500px;
-  }
-}
-
-.glyphicon {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-}
-.glyphicon-chevron-left:before {
-  content: "\e079";
-}
-.glyphicon-chevron-right:before {
-  content: "\e080";
-
-}
-.sr-only {
-  visibility: hidden;
-}
 .carousel {
   position: relative;
   margin-bottom: 20px;
-}
-.carousel .item {
-  height: 550px;
-}
-@media (max-width: 1280px) {
-  .carousel .item {
-    height: 500px;
-  }
-}
-@media (max-width: 768px) {
-  .carousel .item {
-    height: 400px;
-  }
-}
-@media (min-width: 200px) and (max-width: 425px) {
-  .carousel .item {
+
+  &__item {
     height: 300px;
+
+    @media (min-width: @screen-sm) {
+      height: 400px;
+    }
+
+    @media (min-width: @screen-lg) {
+      height: 500px;
+    }
   }
 }
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: auto;
-}
-@media (min-width: 768px) {
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
+
+.slide {
+  &-portrait {
+    background: url('slides/4-mobile.jpg') no-repeat top center;
+    background-size: cover;
+    height: 100%;
+
+    @media (min-width: @screen-xs) {
+      background: url('slides/4-tablet.jpg') no-repeat top center;
+      background-size: cover;
+    }
+
+    @media (min-width: @screen-md) {
+      background: url('slides/4.jpg') no-repeat top center;
+      background-size: cover;
+    }
   }
 
-  .carousel-caption h1 {
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    line-height: 1.4;
-    font-weight: bold;
+  &-family {
+    background: url('slides/1-mobile.jpg') no-repeat top center;
+    background-size: cover;
+    height: 100%;
+
+    @media (min-width: @screen-xs) {
+      background: url('slides/1-tablet.jpg') no-repeat top center;
+      background-size: cover;
+    }
+
+    @media (min-width: @screen-md) {
+      background: url('slides/1.jpg') no-repeat top center;
+      background-size: cover;
+    }
+  }
+
+  &-newborn {
+    background: url('slides/2-mobile.jpg') no-repeat top center;
+    background-size: cover;
+    height: 100%;
+
+    @media (min-width: @screen-xs) {
+      background: url('slides/2-tablet.jpg') no-repeat top center;
+      background-size: cover;
+    }
+
+    @media (min-width: @screen-md) {
+      background: url('slides/2.jpg') no-repeat top center;
+      background-size: cover;
+    }
+  }
+
+  &-wedding {
+    background: url('slides/3-mobile.jpg') no-repeat top center;
+    background-size: cover;
+    height: 100%;
+
+    @media (min-width: @screen-xs) {
+      background: url('slides/3-tablet.jpg') no-repeat top center;
+      background-size: cover;
+    }
+
+    @media (min-width: @screen-lg) {
+      background: url('slides/3.jpg') no-repeat top center;
+      background-size: cover;
+    }
+  }
+
+  &-event {
+    background: url('slides/5-mobile.jpg') no-repeat top center;
+    background-size: cover;
+    height: 100%;
+
+    @media (min-width: @screen-xs) {
+      background: url('slides/5-tablet.jpg') no-repeat top center;
+      background-size: cover;
+    }
+
+    @media (min-width: @screen-lg) {
+      background: url('slides/5.jpg') no-repeat top center;
+      background-size: cover;
+    }
+  }
+
+  &-maternity {
+    background: url('slides/6-mobile.jpg') no-repeat top center;
+    background-size: cover;
+    height: 100%;
+
+    @media (min-width: @screen-xs) {
+      background: url('slides/6-tablet.jpg') no-repeat top center;
+      background-size: cover;
+    }
+
+    @media (min-width: @screen-lg) {
+      background: url('slides/6.jpg') no-repeat top center;
+      background-size: cover;
+    }
   }
 }
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-.carousel-inner > .item {
-  display: none;
-  position: relative;
-  transition: 1.2s ease-in-out left;
-}
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  line-height: 1;
-}
-@media all and (transform-3d), (-webkit-transform-3d) {
-  .carousel-inner > .item {
-    transition: transform 1.2s ease-in-out;
-    backface-visibility: hidden;
-    perspective: 1000;
-  }
-  .carousel-inner > .item.next,
-  .carousel-inner > .item.active.right {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    left: 0;
-  }
-  .ios-safari .carousel-inner > .item.next,
-  .ios-safari .carousel-inner > .item.active.right {
-    -webkit-transform: none;
-    transform: none;
-    animation: fade-out 1.23s ease-in-out;
-  }
-  .carousel-inner > .item.prev,
-  .carousel-inner > .item.active.left {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    left: 0;
-  }
-  .ios-safari .carousel-inner > .item.prev,
-  .ios-safari .carousel-inner > .item.active.left {
-    -webkit-transform: none;
-    transform: none;
-    animation: fade-out 1.2s ease-in-out;
-  }
-  .carousel-inner > .item.next.left,
-  .carousel-inner > .item.prev.right,
-  .carousel-inner > .item.active {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    left: 0;
-  }
-  .ios-safari .carousel-inner > .item.next.left,
-  .ios-safari .carousel-inner > .item.prev.right,
-  .ios-safari .carousel-inner > .item.active {
-    -webkit-transform: none;
-    transform: none;
-    animation: fade-in 1.2s ease-in-out;
-  }
-}
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  display: block;
-}
-.carousel-inner > .active {
-  left: 0;
-}
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.carousel-inner > .next {
-  left: 100%;
-}
-.carousel-inner > .prev {
-  left: -100%;
-}
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-  left: 0;
-}
-.carousel-inner > .active.left {
-  left: -100%;
-}
-.carousel-inner > .active.right {
-  left: 100%;
-}
-.carousel-control {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 15%;
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  filter: alpha(opacity=50);
-  opacity: 0.7;
-}
-.carousel-control.right {
-  right: 0;
-  left: auto;
-}
-.carousel-control:hover,
-.carousel-control:focus {
-  color: #fff;
-  text-decoration: none;
-  filter: alpha(opacity=90);
-  outline: 0;
-  opacity: 1;
-}
-.carousel-control .icon-prev,
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
-  position: absolute;
-  top: 50%;
-  z-index: 5;
-  display: inline-block;
-}
-.carousel-control .icon-prev,
-.carousel-control .glyphicon-chevron-left {
-  left: 50%;
-  margin-left: -10px;
-}
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-right {
-  right: 50%;
-  margin-right: -10px;
-}
-.carousel-control .icon-prev,
-.carousel-control .icon-next {
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  line-height: 1;
-  font-family: serif;
-}
-.carousel-control .icon-prev:before {
-  content: '\2039';
-}
-.carousel-control .icon-next:before {
-  content: '\203a';
-}
-.carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  z-index: 15;
-  width: 60%;
-  margin-left: -30%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 1px;
-  text-indent: -999px;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: #000 \9;
-  background-color: rgba(0, 0, 0, 0);
-}
-.carousel-indicators .active {
-  margin: 0;
-  width: 12px;
-  height: 12px;
-  background-color: #ffffff;
-}
+
 .carousel-caption {
   position: absolute;
   left: 15%;
   right: 15%;
   bottom: 20px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   font-family: 'Fira', Helvetica, sans-serif;
   z-index: 10;
   font-size: 21px;
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    line-height: 1.2;
+    font-weight: bold;
+
+    @media (min-width: @screen-md) {
+      font-size: 1.5em;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 30px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  & .btn {
+    text-shadow: none;
+    opacity: 1;
+  }
 }
-.carousel-caption .btn {
-  text-shadow: none;
-}
-@media screen and (min-width: 768px) {
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
-    font-size: 30px;
+
+.carousel-indicators {
+  & li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px 1px 8px;
+    text-indent: -999px;
+    border: 1px solid @white;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
   }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .icon-prev {
-    margin-left: -15px;
-  }
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-next {
-    margin-right: -15px;
-  }
-  .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
-  }
-  .carousel-indicators {
-    bottom: 20px;
+
+  & .active {
+    margin: 0;
+    width: 12px;
+    height: 12px;
+    background-color: @white;
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Route, Switch, Link, withRouter } from 'react-router-dom';
-import { AppFooter, AppHeader } from './components';
+import { Route, Switch, withRouter } from 'react-router-dom';
+import { AppFooter, AppHeader, NavigationMenu, MobileMenuSwitcher } from './components';
 import NotFound from './routes/NotFound/NotFound';
 import Routes from './routes';
 import './App.less';
@@ -31,37 +31,16 @@ class App extends React.PureComponent {
         </Helmet>
         <div className="page">
           <AppHeader />
-          {isOpenMenu && (
-            <button
-              className="close-btn main-nav__close-btn"
-              type="button"
-              onClick={this.onMenuButtonClick}
-            >
-              Close
-            </button>
-          )}
-          {!isOpenMenu && (
-            <button
-              className="menu-open main-nav__menu-open"
-              type="button"
-              onClick={this.onMenuButtonClick}
-            >
-              Menu
-            </button>
-          )}
+          <MobileMenuSwitcher
+            isOpenMenu={isOpenMenu}
+            onMenuButtonClick={this.onMenuButtonClick}
+          />
           <div className="page-content">
-            <nav className={`navigation ${isOpenMenu && `navigation_open`}`}>
-              {Routes.map((item) => (
-                <Link
-                  key={item.title}
-                  className={`navigation__item ${item.path === this.props.location.pathname && `selected`}`}
-                  to={item.path}
-                  onClick={this.onMenuButtonClick}
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </nav>
+            <NavigationMenu
+              isOpenMenu={isOpenMenu}
+              location={this.props.location.pathname}
+              onMenuButtonClick={this.onMenuButtonClick}
+            />
             <Switch>
               {Routes.map(route => (
                 <Route

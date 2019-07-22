@@ -1,0 +1,88 @@
+@import '../../styles/variables';
+
+.menu-open {
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  right: 31px;
+  background-color: @white;
+  width: 55px;
+  height: 35px;
+  border: 1px solid @pink;
+  border-radius: 3px;
+  z-index: 1600;
+  outline: none;
+  font-family: @font-base;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 0;
+  color: @pink;
+
+  &_hidden {
+    z-index: 10;
+    visibility: hidden;
+  }
+
+  @media (min-width: @screen-md) {
+    display: none;
+  }
+}
+
+.close-btn {
+  border: none;
+  width: 37px;
+  height: 29px;
+  background-color: transparent;
+  position: absolute;
+  right: 24px;
+  top: 14px;
+  z-index: 1600;
+  outline: none;
+  display: none;
+  color: transparent;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 27px;
+    height: 5px;
+    background-color: @pink;
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    transform: rotate(41deg);
+
+    @media(max-width: @screen-sm) {
+      width: 25px;
+      height: 3px;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 27px;
+    height: 5px;
+    background-color: @pink;
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    transform: rotate(137deg);
+
+    @media(max-width: @screen-sm) {
+      width: 25px;
+      height: 3px;
+    }
+  }
+
+  @media(max-width: @screen-md) {
+    display: block;
+  }
+
+  @media(max-width: @screen-sm) {
+    top: 18px;
+    right: 25px;
+    width: 25px;
+    height: 25px;
+  }
+}
