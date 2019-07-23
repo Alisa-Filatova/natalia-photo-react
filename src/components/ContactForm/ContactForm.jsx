@@ -37,9 +37,15 @@ const FORM_FIELDS = [
 ];
 
 class ContactForm extends React.Component {
+
+	onSubmit = (event) => {
+		event.preventDefault();
+		this.props.onSubmit();
+	};
+
   render() {
     return (
-      <form className="form">
+      <form className="form" action="">
 				{FORM_FIELDS.map((item) => (
           <Input
             key={item.name}
@@ -60,6 +66,7 @@ class ContactForm extends React.Component {
           type="submit"
           name="submit"
           text="Send message"
+					onClick={this.props.onSubmit}
         />
       </form>
     );

@@ -7,6 +7,7 @@ import Button from './Button/Button';
 import Input from './Input/Input';
 import NavigationMenu from './NavigationMenu/NavigationMenu';
 import MobileMenuSwitcher from './MobileMenuSwitcher/MobileMenuSwitcher';
+import Alert from './Alert/Alert';
 
 export {
   AppFooter,
@@ -18,4 +19,5 @@ export {
 	Input,
   NavigationMenu,
   MobileMenuSwitcher,
+  Alert,
 };

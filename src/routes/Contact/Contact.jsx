@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactForm } from '../../components';
+import { ContactForm, Alert } from '../../components';
 import Post from './images/post.svg';
 import Phone from './images/phone.svg';
 import Mail from './images/mail.svg';
@@ -62,6 +62,7 @@ const Contact = () => (
       </div>
     </div>
     <ContactForm />
+    <Alert />
   </div>
 );
 
