@@ -48,7 +48,7 @@ const Contact = () => (
           {EMAIL}
         </a>
       </p>
-      <div>
+      <div className="postImage">
         <img
           src={Post}
           alt=""

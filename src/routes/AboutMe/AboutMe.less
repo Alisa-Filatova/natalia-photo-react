@@ -5,6 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 10px;
   text-align: left;
 
   &__title {
@@ -15,13 +17,13 @@
   }
 
   &__description {
-    max-width: 648px;
     line-height: 25px;
-    padding-left: 10px;
+    padding: 20px;
   }
 
   &__photo-box {
-    max-width: 634px;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   &__photo {
@@ -33,6 +35,28 @@
 
   &__link {
     text-decoration: underline;
+  }
+
+  @media (min-width: @screen-sm) {
+
+    &__photo-box {
+      max-width: 400px;
+    }
+  }
+
+  @media (min-width: @screen-md) {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    &__photo-box {
+      max-width: 634px;
+      order: 1;
+    }
+
+    &__description {
+      max-width: 648px;
+      padding: 0 0 0 46px;
+    }
   }
 }
 

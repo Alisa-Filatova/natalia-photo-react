@@ -1,14 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import { AppFooter, AppHeader, NavigationMenu, MobileMenuSwitcher } from './components';
-import NotFound from './routes/NotFound/NotFound';
-import Routes from './routes';
+import { AppFooter, AppHeader, NavigationMenu, MobileMenuSwitcher } from '../index';
+import NotFound from '../../routes/NotFound/NotFound';
+import Routes from '../../routes';
 import './App.less';
 
 class App extends React.PureComponent {
   constructor(props) {
     super(props);
+
     this.state = {
       isOpenMenu: false,
     }

@@ -7,7 +7,7 @@ import LogoCompactXs from './images/logo-compact-xs.svg';
 import './AppHeader.less';
 
 const AppHeader = () => (
-  <header className="root">
+  <header className="header__root">
     <div className="header">
       <NavLink
         className="logo"
@@ -19,7 +19,7 @@ const AppHeader = () => (
             srcSet={LogoCompactXs}
           />
           <source
-            media="(max-width:768px)"
+            media="(max-width:1024px)"
             srcSet={LogoCompact}
           />
           <img

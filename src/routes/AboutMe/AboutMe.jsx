@@ -6,6 +6,9 @@ import './AboutMe.less';
 
 const AboutMe = () => (
   <section className="about-me">
+    <div className="about-me__photo-box">
+      <img className="about-me__photo" src={Photo} alt="" />
+    </div>
     <div className="about-me__description">
     <h2 className="about-me__title">Hello, I am Natalia! Welcome to my world!</h2>
     <p className="about-me__text">
@@ -39,9 +42,6 @@ const AboutMe = () => (
       If you are interested in booking a shoot, please just drop me a message on
       my <NavLink className="base-link about-me__link" to={Routes[8].path}>Contact</NavLink> page.
     </p>
-    </div>
-    <div className="about-me__photo-box">
-      <img className="about-me__photo" src={Photo} alt="" />
     </div>
   </section>
 );

@@ -36,7 +36,7 @@ const FORM_FIELDS = [
 	},
 ];
 
-export default class ContactForm extends React.Component {
+class ContactForm extends React.Component {
   render() {
     return (
       <form className="form">
@@ -54,9 +54,9 @@ export default class ContactForm extends React.Component {
           rows="5"
           placeholder="Your message"
           name="message"
-        />
+				/>
         <Button
-          className="form__btn"
+          className="btn form__btn"
           type="submit"
           name="submit"
           text="Send message"
@@ -65,3 +65,5 @@ export default class ContactForm extends React.Component {
     );
   }
 }
+
+export default ContactForm;
