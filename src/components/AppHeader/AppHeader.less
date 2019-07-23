@@ -1,18 +1,21 @@
 @import '../../styles/variables.less';
 
-.header__root {
-  flex: 0 0 auto;
-}
-
 .header {
-  width: 100%;
-  position: relative;
+  max-width: 100%;
   padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1500;
+  background: @white;
+  height: 103px;
 
   @media (min-width: @screen-md) {
     background: url('images/natalia-header.svg') no-repeat top center;
     background-size: contain;
     padding: 6px 20px 20px;
+    position: static;
+    height: auto;
   }
 
   @media (min-width: @screen-lg) {
@@ -21,20 +24,19 @@
 }
 
 .logo {
-
-  @media (min-width: @screen-xs) {
-    width: 60%;
-    margin-left: 0;
-  }
+  display: inline-block;
+  width: 300px;
+  margin: 0;
+  opacity: 1;
 
   @media (min-width: @screen-sm) {
-    width: 40%;
+    width: 300px;
+    margin-left: 0;
   }
 
   @media (min-width: @screen-md) {
     width: 49%;
     display: block;
     margin: 0 auto;
-    opacity: 1;
   }
 }

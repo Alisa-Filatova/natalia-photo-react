@@ -5,8 +5,9 @@ import Logo from './images/logo.svg';
 import LogoCompact from './images/logo-compact.svg';
 import LogoCompactXs from './images/logo-compact-xs.svg';
 import './AppHeader.less';
+import { MobileMenuSwitcher } from "../index";
 
-const AppHeader = () => (
+const AppHeader = (props) => (
   <header className="header__root">
     <div className="header">
       <NavLink
@@ -29,6 +30,10 @@ const AppHeader = () => (
           />
         </picture>
       </NavLink>
+      <MobileMenuSwitcher
+        isOpenMenu={props.isOpenMenu}
+        onMenuButtonClick={props.onMenuButtonClick}
+      />
     </div>
   </header>
 );

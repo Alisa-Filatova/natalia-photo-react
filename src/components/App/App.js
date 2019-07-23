@@ -31,8 +31,7 @@ class App extends React.PureComponent {
           <meta name="author" content="Alisa Filatova, alicedesign.ru" />
         </Helmet>
         <div className="page">
-          <AppHeader />
-          <MobileMenuSwitcher
+          <AppHeader
             isOpenMenu={isOpenMenu}
             onMenuButtonClick={this.onMenuButtonClick}
           />
