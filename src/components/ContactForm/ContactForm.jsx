@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
 import './ContactForm.less';
@@ -9,12 +9,14 @@ const FORM_FIELDS = [
     name: 'name',
     placeholder: 'Your name',
     required: true,
+		ref: this.nameInput,
   },
 	{
 		type: 'email',
 		name: 'email',
 		placeholder: 'E-mail',
 		required: true,
+		ref: this.emailInput,
 	},
 	{
 		type: 'tel',
@@ -36,10 +38,36 @@ const FORM_FIELDS = [
 	},
 ];
 
+const EMAIL_REGEXP = new RegExp('^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$');
+const ERROR_COLOR = 'red';
+const BASE_COLOR = 'grey';
+
 class ContactForm extends React.Component {
+
+	constructor(props) {
+		super(props);
+
+		this.emailInput = React.createRef();
+		this.nameInput = React.createRef();
+	}
+
+	handleValidateFields = () => {
+		const email = this.emailInput.current.value;
+		const name = this.nameInput.current.value;
+
+		if (!EMAIL_REGEXP.test(email)) {
+			this.emailInput.current.style.borderColor = ERROR_COLOR;
+		} else if (!name) {
+			this.nameInput.current.style.borderColor = ERROR_COLOR;
+		} else {
+			this.emailInput.current.style.borderColor = BASE_COLOR;
+			this.nameInput.current.style.borderColor = BASE_COLOR;
+		}
+	};
 
 	onSubmit = (event) => {
 		event.preventDefault();
+		this.handleValidateFields();
 		this.props.onSubmit();
 	};
 
@@ -53,6 +81,8 @@ class ContactForm extends React.Component {
             name={item.name}
             placeholder={item.placeholder}
             required={item.required}
+						ref={item.ref ? item.ref : ''}
+						onChange={this.handleValidateFields}
           />
         ))}
         <textarea
