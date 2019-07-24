@@ -8,6 +8,7 @@ import Input from './Input/Input';
 import NavigationMenu from './NavigationMenu/NavigationMenu';
 import MobileMenuSwitcher from './MobileMenuSwitcher/MobileMenuSwitcher';
 import Alert from './Alert/Alert';
+import Overlay from './Overlay/Overlay';
 
 export {
   AppFooter,
@@ -20,4 +21,5 @@ export {
   NavigationMenu,
   MobileMenuSwitcher,
   Alert,
+  Overlay,
 };

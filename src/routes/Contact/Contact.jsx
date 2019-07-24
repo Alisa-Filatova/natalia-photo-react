@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactForm, Alert } from '../../components';
+import { ContactForm } from '../../components';
 import Post from './images/post.svg';
 import Phone from './images/phone.svg';
 import Mail from './images/mail.svg';
@@ -8,6 +8,7 @@ import './Contact.less';
 
 const PHONE_NUMBER = '7-609-164-258';
 const EMAIL = 'nata_vis@mail.ru';
+
 
 class Contact extends React.PureComponent {
   render() {
@@ -63,8 +64,7 @@ class Contact extends React.PureComponent {
             />
           </div>
         </div>
-        <ContactForm onSubmit={} />
-        <Alert/>
+        <ContactForm />
       </div>
     );
   }
