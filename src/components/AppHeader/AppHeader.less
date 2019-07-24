@@ -1,25 +1,30 @@
 @import '../../styles/variables.less';
 
 .header {
-  max-width: 100%;
-  padding: 10px;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1500;
+  z-index: @app-menu-zindex;
   background: @white;
-  height: 103px;
+  height: @header-height;
+  max-width: 100%;
+  padding: 10px;
+  box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.4);
 
   @media (min-width: @screen-md) {
     background: url('images/natalia-header.svg') no-repeat top center;
     background-size: contain;
-    padding: 6px 20px 20px;
+    padding: 6px 0 4px;
     position: static;
     height: auto;
+    box-shadow: none;
   }
 
-  @media (min-width: @screen-lg) {
-    height: 280px;
+  &_opened {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -28,11 +33,6 @@
   width: 300px;
   margin: 0;
   opacity: 1;
-
-  @media (min-width: @screen-sm) {
-    width: 300px;
-    margin-left: 0;
-  }
 
   @media (min-width: @screen-md) {
     width: 49%;

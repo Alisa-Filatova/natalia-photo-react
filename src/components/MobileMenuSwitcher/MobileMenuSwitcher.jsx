@@ -4,11 +4,15 @@ import './MobileMenuSwitcher.less';
 const MobileMenuSwitcher = (props) => {
   return (
     <button
-      className={`${props.isOpenMenu ? 'close-btn main-nav__close-btn' : 'menu-open main-nav__menu-open'}`}
+      className="menu-wrapper"
       type="button"
       onClick={props.onMenuButtonClick}
     >
-      {props.isOpenMenu ?  'Close' : 'Menu'}
+      <div className="box-item">
+        <div className={`menu-item ${props.isOpenMenu ? 'active' : ''}`}>
+          <div className="burger-lines"/>
+        </div>
+      </div>
     </button>
   );
 };

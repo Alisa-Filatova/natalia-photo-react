@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import { AppFooter, AppHeader, NavigationMenu } from '../index';
+import { AppFooter, AppHeader } from '../index';
 import NotFound from '../../routes/NotFound/NotFound';
 import Routes from '../../routes';
 import './App.less';
@@ -34,13 +34,9 @@ class App extends React.PureComponent {
           <AppHeader
             isOpenMenu={isOpenMenu}
             onMenuButtonClick={this.onMenuButtonClick}
+            pathname={this.props.location.pathname}
           />
           <div className="page-content">
-            <NavigationMenu
-              isOpenMenu={isOpenMenu}
-              location={this.props.location.pathname}
-              onMenuButtonClick={this.onMenuButtonClick}
-            />
             <Switch>
               {Routes.map(route => (
                 <Route
