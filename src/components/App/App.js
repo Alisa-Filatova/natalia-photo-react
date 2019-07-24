@@ -44,8 +44,7 @@ class App extends React.PureComponent {
                   component={route.component}
                   path={route.path}
                   exact={route.exact}
-                />
-                )
+                />)
               )}
               <Route component={NotFound} />
             </Switch>

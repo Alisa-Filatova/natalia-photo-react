@@ -94,12 +94,19 @@ class ContactForm extends React.Component {
 
 		const {name, email, tel, data, message} = this.state;
 
-		api.sendMessage({name, email, tel, data, message}).then(() => {
+		api.sendMessage({name, email, tel, data, message})
+			.then(() => {
 				this.setState({sendStatus: 'success'});
 				this.setState({showAlert: true});
-			  this.setState({name: '', email: '', tel: '', data: '', message: ''});
-			}
-		).catch(() => {
+			  this.setState({
+					name: '',
+					email: '',
+					tel: '',
+					data: '',
+					message: ''
+			  });
+			})
+			.catch(() => {
 				this.setState({sendStatus: 'error'});
 				this.setState({showAlert: true});
 			}
