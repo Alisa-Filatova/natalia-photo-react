@@ -1,8 +1,6 @@
 const Method = {
   GET: `GET`,
   POST: `POST`,
-  PUT: `PUT`,
-  DELETE: `DELETE`
 };
 
 const ResponseStatus = {
@@ -23,24 +21,16 @@ const toJSON = (response) => {
 };
 
 class API {
-  constructor({endPoint, authorization}) {
-    this.endPoint = endPoint;
-    this.authorization = authorization;
-  }
-
   sendMessage(formData) {
     return this.load({
-      url: `enroll`,
       method: Method.POST,
       body: JSON.stringify(formData),
       headers: new Headers({'Content-Type': `application/json`})
     }).then(toJSON);
   }
 
-  load({url, method = Method.POST, body = null, headers = new Headers()}) {
-    headers.append(`Authorization`, this.authorization);
-
-    return fetch(`${this.endPoint}/${url}`, {method, body, headers})
+  load({method = Method.POST, body = null, headers = new Headers()}) {
+    return fetch('/enroll', {method, body, headers})
       .then(checkStatus)
       .catch((error) => { throw error });
   }

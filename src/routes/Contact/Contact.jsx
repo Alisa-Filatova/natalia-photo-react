@@ -4,13 +4,119 @@ import Post from './images/post.svg';
 import Phone from './images/phone.svg';
 import Mail from './images/mail.svg';
 import Sign from './images/sign.svg';
+import API from '../../api';
 import './Contact.less';
 
 const PHONE_NUMBER = '7-609-164-258';
 const EMAIL = 'nata_vis@mail.ru';
+const api = new API();
 
+const FORM_FIELDS = [
+  {
+    type: 'text',
+    name: 'name',
+    placeholder: 'Your name',
+    required: true,
+    action: this.onNameChange,
+  },
+  {
+    type: 'email',
+    name: 'email',
+    placeholder: 'E-mail',
+    required: true,
+    action: this.onEmailChange,
+  },
+  {
+    type: 'tel',
+    name: 'phone',
+    placeholder: 'Phone',
+    required: false,
+    action: this.onTelChange,
+  },
+  {
+    type: 'text',
+    name: 'location',
+    placeholder: 'Event location',
+    required: false,
+    action: this.onLocationChange,
+  },
+  {
+    type: 'text',
+    name: 'date',
+    placeholder: 'Event date',
+    required: false,
+    action: this.onDateChange,
+  },
+];
 
 class Contact extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showAlert: false,
+      sendStatus: '',
+      userName: '',
+      email: '',
+      tel: '',
+      location: '',
+      date: '',
+      message: '',
+    }
+  }
+
+  onNameChange = (event)=> {
+    this.setState({userName: event.target.value});
+  };
+
+  onEmailChange = (event)=> {
+    this.setState({email: event.target.value});
+  };
+
+  onTelChange = (event)=> {
+    this.setState({tel: event.target.value});
+  };
+
+  onLocationChange = (event)=> {
+    this.setState({location: event.target.value});
+  };
+
+  onDateChange = (event)=> {
+    this.setState({date: event.target.value});
+  };
+
+  onMessageChange = (event) => {
+    this.setState({message: event.target.value});
+  };
+
+  onSubmitMessage = (event) => {
+    event.preventDefault();
+
+    const {name, email, tel, data, message} = this.state;
+
+    api.sendMessage({name, email, tel, data, message})
+    .then(() => {
+      this.setState({sendStatus: 'success'});
+      this.setState({showAlert: true});
+      this.setState({
+        name: '',
+        email: '',
+        tel: '',
+        data: '',
+        message: ''
+      });
+    })
+    .catch(() => {
+        this.setState({sendStatus: 'error'});
+        this.setState({showAlert: true});
+      }
+    );
+  };
+
+  onAlertClose = () => {
+    this.setState({showAlert: false});
+  };
+
   render() {
     return (
       <div className="contact">
@@ -64,7 +170,14 @@ class Contact extends React.PureComponent {
             />
           </div>
         </div>
-        <ContactForm />
+        <ContactForm
+          formFields={FORM_FIELDS}
+          onAlertClose={this.onAlertClose}
+          onMessageChange={this.onMessageChange}
+          sendStatus={this.state.sendStatus}
+          showAlert={this.state.showAlert}
+          onSubmitMessage={this.onSubmitMessage}
+        />
       </div>
     );
   }
