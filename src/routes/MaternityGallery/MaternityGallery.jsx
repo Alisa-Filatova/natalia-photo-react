@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Gallery }  from '../../components';
 import MATERNITY from './maternity.json';
 

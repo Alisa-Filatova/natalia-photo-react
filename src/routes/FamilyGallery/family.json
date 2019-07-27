@@ -3,6 +3,7 @@
     "src": "img/family-gallery/large/1.jpg",
     "thumbnail": "img/family-gallery/small/1.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "1",
     "thumbnailAlt": "1"
   },
@@ -10,6 +11,7 @@
     "src": "img/family-gallery/large/8.jpg",
     "thumbnail": "img/family-gallery/small/8.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "8",
     "thumbnailAlt": "8"
   },
@@ -17,6 +19,7 @@
     "src": "img/family-gallery/large/11.jpg",
     "thumbnail": "img/family-gallery/small/11.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "11",
     "thumbnailAlt": "11"
   },
@@ -24,6 +27,7 @@
     "src": "img/family-gallery/large/28.jpg",
     "thumbnail": "img/family-gallery/small/28.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "28",
     "thumbnailAlt": "28"
   },
@@ -31,6 +35,7 @@
     "src": "img/family-gallery/large/3.jpg",
     "thumbnail": "img/family-gallery/small/3.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "3",
     "thumbnailAlt": "3"
   },
@@ -38,6 +43,7 @@
     "src": "img/family-gallery/large/19.jpg",
     "thumbnail": "img/family-gallery/small/19.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "19",
     "thumbnailAlt": "19"
   },
@@ -45,6 +51,7 @@
     "src": "img/family-gallery/large/4.jpg",
     "thumbnail": "img/family-gallery/small/4.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "4",
     "thumbnailAlt": "4"
   },
@@ -52,6 +59,7 @@
     "src": "img/family-gallery/large/2.jpg",
     "thumbnail": "img/family-gallery/small/2.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "2",
     "thumbnailAlt": "2"
   },
@@ -59,6 +67,7 @@
     "src": "img/family-gallery/large/5.jpg",
     "thumbnail": "img/family-gallery/small/5.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "5",
     "thumbnailAlt": "5"
   },
@@ -66,6 +75,7 @@
     "src": "img/family-gallery/large/6.jpg",
     "thumbnail": "img/family-gallery/small/6.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "6",
     "thumbnailAlt": "6"
   },
@@ -73,6 +83,7 @@
     "src": "img/family-gallery/large/7.jpg",
     "thumbnail": "img/family-gallery/small/7.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "7",
     "thumbnailAlt": "7"
   },
@@ -80,6 +91,7 @@
     "src": "img/family-gallery/large/9.jpg",
     "thumbnail": "img/family-gallery/small/9.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "9",
     "thumbnailAlt": "9"
   },
@@ -87,6 +99,7 @@
     "src": "img/family-gallery/large/10.jpg",
     "thumbnail": "img/family-gallery/small/10.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "10",
     "thumbnailAlt": "10"
   },
@@ -95,6 +108,7 @@
     "src": "img/family-gallery/large/12.jpg",
     "thumbnail": "img/family-gallery/small/12.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "12",
     "thumbnailAlt": "12"
   },
@@ -102,6 +116,7 @@
     "src": "img/family-gallery/large/13.jpg",
     "thumbnail": "img/family-gallery/small/13.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "13",
     "thumbnailAlt": "13"
   },
@@ -109,6 +124,7 @@
     "src": "img/family-gallery/large/14.jpg",
     "thumbnail": "img/family-gallery/small/14.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "14",
     "thumbnailAlt": "14"
   },
@@ -116,6 +132,7 @@
     "src": "img/family-gallery/large/15.jpg",
     "thumbnail": "img/family-gallery/small/15.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "15",
     "thumbnailAlt": "15"
   },
@@ -123,6 +140,7 @@
     "src": "img/family-gallery/large/16.jpg",
     "thumbnail": "img/family-gallery/small/16.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "16",
     "thumbnailAlt": "16"
   },
@@ -130,6 +148,7 @@
     "src": "img/family-gallery/large/17.jpg",
     "thumbnail": "img/family-gallery/small/17.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "17",
     "thumbnailAlt": "17"
   },
@@ -137,6 +156,7 @@
     "src": "img/family-gallery/large/18.jpg",
     "thumbnail": "img/family-gallery/small/18.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "18",
     "thumbnailAlt": "18"
   },
@@ -144,6 +164,7 @@
     "src": "img/family-gallery/large/20.jpg",
     "thumbnail": "img/family-gallery/small/20.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "20",
     "thumbnailAlt": "20"
   },
@@ -151,6 +172,7 @@
     "src": "img/family-gallery/large/21.jpg",
     "thumbnail": "img/family-gallery/small/21.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "21",
     "thumbnailAlt": "21"
   },
@@ -158,6 +180,7 @@
     "src": "img/family-gallery/large/22.jpg",
     "thumbnail": "img/family-gallery/small/22.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "22",
     "thumbnailAlt": "22"
   },
@@ -165,6 +188,7 @@
     "src": "img/family-gallery/large/23.jpg",
     "thumbnail": "img/family-gallery/small/23.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "23",
     "thumbnailAlt": "23"
   },
@@ -172,6 +196,7 @@
     "src": "img/family-gallery/large/24.jpg",
     "thumbnail": "img/family-gallery/small/24.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "24",
     "thumbnailAlt": "24"
   },
@@ -179,6 +204,7 @@
     "src": "img/family-gallery/large/25.jpg",
     "thumbnail": "img/family-gallery/small/25.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "25",
     "thumbnailAlt": "25"
   },
@@ -186,6 +212,7 @@
     "src": "img/family-gallery/large/26.jpg",
     "thumbnail": "img/family-gallery/small/26.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "26",
     "thumbnailAlt": "26"
   },
@@ -193,6 +220,7 @@
     "src": "img/family-gallery/large/27.jpg",
     "thumbnail": "img/family-gallery/small/27.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "27",
     "thumbnailAlt": "27"
   },
@@ -200,6 +228,7 @@
     "src": "img/family-gallery/large/29.jpg",
     "thumbnail": "img/family-gallery/small/29.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "29",
     "thumbnailAlt": "29"
   },
@@ -207,6 +236,7 @@
     "src": "img/family-gallery/large/30.jpg",
     "thumbnail": "img/family-gallery/small/30.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "30",
     "thumbnailAlt": "30"
   },
@@ -214,6 +244,7 @@
     "src": "img/family-gallery/large/31.jpg",
     "thumbnail": "img/family-gallery/small/31.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -221,6 +252,7 @@
     "src": "img/family-gallery/large/32.jpg",
     "thumbnail": "img/family-gallery/small/32.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -228,6 +260,7 @@
     "src": "img/family-gallery/large/33.jpg",
     "thumbnail": "img/family-gallery/small/33.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -235,6 +268,7 @@
     "src": "img/family-gallery/large/34.jpg",
     "thumbnail": "img/family-gallery/small/34.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -242,6 +276,7 @@
     "src": "img/family-gallery/large/35.jpg",
     "thumbnail": "img/family-gallery/small/35.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -249,6 +284,7 @@
     "src": "img/family-gallery/large/36.jpg",
     "thumbnail": "img/family-gallery/small/36.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -256,6 +292,7 @@
     "src": "img/family-gallery/large/37.jpg",
     "thumbnail": "img/family-gallery/small/37.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -263,6 +300,7 @@
     "src": "img/family-gallery/large/38.jpg",
     "thumbnail": "img/family-gallery/small/38.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -270,6 +308,7 @@
     "src": "img/family-gallery/large/39.jpg",
     "thumbnail": "img/family-gallery/small/39.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -277,6 +316,7 @@
     "src": "img/family-gallery/large/40.jpg",
     "thumbnail": "img/family-gallery/small/40.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -284,6 +324,7 @@
     "src": "img/family-gallery/large/41.jpg",
     "thumbnail": "img/family-gallery/small/41.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -291,6 +332,7 @@
     "src": "img/family-gallery/large/42.jpg",
     "thumbnail": "img/family-gallery/small/42.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -298,6 +340,7 @@
     "src": "img/family-gallery/large/43.jpg",
     "thumbnail": "img/family-gallery/small/43.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -305,6 +348,7 @@
     "src": "img/family-gallery/large/44.jpg",
     "thumbnail": "img/family-gallery/small/44.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -312,6 +356,7 @@
     "src": "img/family-gallery/large/45.jpg",
     "thumbnail": "img/family-gallery/small/45.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -319,6 +364,7 @@
     "src": "img/family-gallery/large/46.jpg",
     "thumbnail": "img/family-gallery/small/46.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -326,6 +372,7 @@
     "src": "img/family-gallery/large/47.jpg",
     "thumbnail": "img/family-gallery/small/47.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   },
@@ -333,6 +380,7 @@
     "src": "img/family-gallery/large/48.jpg",
     "thumbnail": "img/family-gallery/small/48.jpg",
     "thumbnailHeight": 300,
+    "thumbnailWidth": 300,
     "originalAlt": "",
     "thumbnailAlt": ""
   }
