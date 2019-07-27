@@ -17,7 +17,7 @@ const AppFooter = () => (
       </p>
       made by <a
           className="link"
-          href={`https://${AUTHOR_SITE}`}
+          href={`http://${AUTHOR_SITE}`}
           target="_blank"
           rel="noopener noreferrer"
           >{AUTHOR_SITE}</a>
