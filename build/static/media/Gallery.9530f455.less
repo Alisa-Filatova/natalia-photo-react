@@ -1,0 +1,45 @@
+@import '../../styles/variables';
+@import '../../styles/index';
+
+.ReactGridGallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  &_tile {
+    flex: 1 1 100%;
+
+    img {
+      object-fit: cover;
+      object-position: top;
+      width: 100% !important;
+      height: 100% !important;
+      animation: fade-in 0.5s ease-in;
+      margin: 0 !important;
+    }
+
+    img:nth-child(even) {
+      animation: fade-in 0.9s ease-in;
+    }
+
+    @media (min-width: @screen-xs) {
+      flex: 1 1 48%;
+    }
+
+    @media (min-width: @screen-sm) {
+      flex: 1 1 32%;
+    }
+
+    @media (min-width: @screen-lg) {
+      flex: 1 1 24%;
+    }
+  }
+
+  &_tile-viewport {
+    width: auto !important;
+  }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

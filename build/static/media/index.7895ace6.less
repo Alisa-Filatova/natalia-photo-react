@@ -1,0 +1,53 @@
+@import 'variables';
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  outline: 0 !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: @font-base;
+  color: @font-color;
+  width: 100%;
+  min-width: 320px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: none;
+  font-feature-settings: "pnum" 1, "kern" 1, "liga" 1;
+  box-sizing: border-box;
+  cursor: default;
+  font-weight: 500;
+}
+
+:global(#root) {
+  height: 100%;
+
+  @media (min-width: @screen-sm) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+a {
+  text-decoration: none;
+  opacity: 0.8;
+  color: @font-color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: @pink;
+    text-decoration: none;
+  }
+}

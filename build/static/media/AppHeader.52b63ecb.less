@@ -1,0 +1,45 @@
+@import '../../styles/variables.less';
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: @app-menu-zindex;
+  background: @white;
+  height: @header-height;
+  max-width: 100%;
+  padding: 10px;
+  box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.4);
+
+  @media (min-width: @screen-md) {
+    background: url('images/natalia-header.svg') no-repeat top center;
+    background-size: contain;
+    padding: 6px 0 4px;
+    position: static;
+    height: auto;
+    box-shadow: none;
+    z-index: 1;
+  }
+
+  @media (max-width: @screen-md) {
+    &_opened {
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: 100vh;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+}
+
+.logo {
+  display: inline-block;
+  width: 300px;
+  margin: 0;
+  opacity: 1;
+
+  @media (min-width: @screen-md) {
+    width: 49%;
+    display: block;
+    margin: 0 auto;
+  }
+}
