@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.e87de80f.chunk.css",
+    "main.css": "/static/css/main.da9e15d4.chunk.css",
     "main.js": "/static/js/main.9d09c0c2.chunk.js",
     "main.js.map": "/static/js/main.9d09c0c2.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.ec327cf3.js",
@@ -9,10 +9,10 @@
     "static/js/2.65918075.chunk.js": "/static/js/2.65918075.chunk.js",
     "static/js/2.65918075.chunk.js.map": "/static/js/2.65918075.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.27e05a5bfcfec21a8fe572c5d09a6b6d.js": "/precache-manifest.27e05a5bfcfec21a8fe572c5d09a6b6d.js",
+    "precache-manifest.e915a318f9919de40289418fa4e19262.js": "/precache-manifest.e915a318f9919de40289418fa4e19262.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.6722eb72.chunk.css.map": "/static/css/2.6722eb72.chunk.css.map",
-    "static/css/main.e87de80f.chunk.css.map": "/static/css/main.e87de80f.chunk.css.map",
+    "static/css/main.da9e15d4.chunk.css.map": "/static/css/main.da9e15d4.chunk.css.map",
     "static/media/Carousel.less": "/static/media/react-bootstrap-carousel.f7448c04.ttf",
     "static/media/404.png": "/static/media/404.50040cbb.png",
     "static/media/about-desktop.png": "/static/media/about-desktop.28aed3f1.png",
