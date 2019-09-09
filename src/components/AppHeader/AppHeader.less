@@ -1,6 +1,6 @@
 @import '../../styles/variables.less';
 
-.header {
+.root {
   position: fixed;
   top: 0;
   width: 100%;
@@ -20,14 +20,14 @@
     box-shadow: none;
     z-index: 1;
   }
+}
 
-  @media (max-width: @screen-md) {
-    &_opened {
-      overflow-x: hidden;
-      overflow-y: auto;
-      height: 100vh;
-      -webkit-overflow-scrolling: touch;
-    }
+@media (max-width: @screen-md) {
+  .opened {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
   }
 }
 

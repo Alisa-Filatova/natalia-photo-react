@@ -1,3 +1,1 @@
-**NataliaPhoto** 
-
-Portfolio web site for Natalia Biriouk photographer from California USA
+Personal portfolio web site of Natalia Biriouk photorgapher

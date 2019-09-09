@@ -5,12 +5,13 @@ import Logo from './images/logo.svg';
 import LogoCompact from './images/logo-compact.svg';
 import LogoCompactXs from './images/logo-compact-xs.svg';
 import { MobileMenuSwitcher, NavigationMenu } from '../index';
-import './AppHeader.less';
+import classNames from 'classnames';
+import styles from './AppHeader.less';
 
 const AppHeader = (props) => (
-  <header className={`header ${props.isOpenMenu ? 'header_opened' : ''}`}>
+  <header className={classNames(styles.root, props.isOpenMenu && styles.opened)}>
     <NavLink
-      className="logo"
+      className={styles.logo}
       to={Routes[0].path}
     >
       <picture>
@@ -23,7 +24,7 @@ const AppHeader = (props) => (
           srcSet={LogoCompact}
         />
         <img
-          className="logo"
+          className={styles.logo}
           src={Logo}
           alt="Natalia Biriouk Photography"
         />

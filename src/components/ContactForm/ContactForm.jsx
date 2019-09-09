@@ -2,7 +2,8 @@ import React from 'react';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
 import Alert from '../Alert/Alert';
-import './ContactForm.less';
+import classNames from 'classnames';
+import styles from './ContactForm.less';
 
 const ContactForm = (
   {
@@ -15,7 +16,7 @@ const ContactForm = (
   }) => (
   <>
     <form
-      className="form"
+      className={styles.root}
       action=""
       method="post"
       onSubmit={onSubmitMessage}
@@ -31,14 +32,14 @@ const ContactForm = (
         />
       ))}
       <textarea
-        className="input-text form__textarea"
+        className={classNames(styles.inputText, styles.textArea)}
         rows="5"
         placeholder="Your message"
         name="message"
         onChange={onMessageChange}
       />
       <Button
-        className="btn form__btn"
+        className={styles.btn}
         type="submit"
         name="submit"
         text="Send message"

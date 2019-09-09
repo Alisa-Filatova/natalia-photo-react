@@ -1,9 +1,10 @@
 import React from 'react';
-import './Input.less';
+import classNames from 'classnames';
+import styles from './Input.less';
 
 const Input = (props) => (
   <input
-    className={`input-text ${props.className}`}
+    className={classNames(styles.root, props.className)}
     onChange={props.onChange}
     type={props.type}
     name={props.name}

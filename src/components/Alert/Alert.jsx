@@ -2,22 +2,23 @@ import React from 'react';
 import { Button, Overlay } from '../../components';
 import ErrorIcon from './icons/error.svg';
 import SuccessIcon from './icons/success.svg';
-import './Alert.less';
+import classNames from 'classnames';
+import styles from './Alert.less';
 
 const Alert = ({type = 'success', onClose}) => {
   return (
     <>
-      <div className="alert 'alert_show">
-        <div className="alert__container alert__container_header">
+      <div className={classNames(styles.root, styles[type])}>
+        <div className={styles.containerHeader}>
           <img
             src={type === 'success' ? SuccessIcon : ErrorIcon}
-            className="alert__icon"
+            className={styles.icon}
             alt=""
           />
         </div>
-        <div className="alert__container alert__container_content">
-          <h3 className="alert__title">{type === 'success' ? 'Thank you!' : 'Oops!'}</h3>
-          <p className="alert__message">
+        <div className={styles.containerContent}>
+          <h3 className={styles.title}>{type === 'success' ? 'Thank you!' : 'Oops!'}</h3>
+          <p className={styles.message}>
             {type === 'success' ?
               'Your message has been sent. I will contact you soon.' :
               'Something wrong. Try again later.'
@@ -25,7 +26,7 @@ const Alert = ({type = 'success', onClose}) => {
           </p>
           <Button
             type="button"
-            className={`btn alert__btn alert__btn_${type}`}
+            className={classNames(styles.btn, styles[type])}
             onClick={onClose}
             text="Close"
           >

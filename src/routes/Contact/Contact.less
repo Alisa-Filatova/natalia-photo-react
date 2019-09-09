@@ -1,32 +1,14 @@
 @import '../../styles/variables';
 @import '../../styles/index';
 
-.contact {
+.root {
   font-size: 16px;
   justify-content: center;
   align-items: center;
   padding-bottom: 10px;
 
-  &__block {
-    text-align: center;
-    padding: 20px 10px 10px;
-  }
-
-  &__text {
-    margin-bottom: 4px;
-  }
-
   @media (min-width: @screen-md) {
     padding-top: 25px;
-
-    &__block {
-      padding-bottom: 20px;
-    }
-
-    &__description {
-      margin-bottom: 27px;
-      line-height: 28px;
-    }
   }
 
   @media (min-width: @screen-lg) {
@@ -37,25 +19,35 @@
     padding: 20px 47px 50px;
     font-size: 16px;
     text-align: left;
+  }
+}
 
-    &__title {
-      margin-top: 0;
-    }
+.title {
+  @media (min-width: @screen-lg) {
+    margin-top: 0;
+  }
+}
 
-    &__block {
-      padding-right: 20px;
-      padding-left: 0;
-      text-align: left;
-    }
+.block {
+  text-align: center;
+  padding: 20px 10px 10px;
+  
+  @media (min-width: @screen-md) {
+    padding-bottom: 20px;
+  }
+  
+  @media (min-width: @screen-lg) {
+    padding-right: 20px;
+    padding-left: 0;
+    text-align: left;
+  }
+}
 
-    &__description {
-      margin-bottom: 55px;
-      line-height: 24px;
-    }
-
-    &__text {
-      margin: 0;
-    }
+.text {
+  margin-bottom: 4px;
+  
+  @media (min-width: @screen-lg) {
+    margin: 0;
   }
 }
 
@@ -73,5 +65,18 @@
 
   @media (min-width: @screen-lg) {
     display: inline-block;
+  }
+}
+
+
+.description {
+  @media (min-width: @screen-md) {
+    margin-bottom: 27px;
+    line-height: 28px;
+  }
+  
+  @media (min-width: @screen-lg) {
+    margin-bottom: 55px;
+    line-height: 24px;
   }
 }

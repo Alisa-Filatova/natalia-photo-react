@@ -2,25 +2,20 @@
 @import '../../styles/variables';
 @import '../../styles/index';
 
-.carousel {
-  position: relative;
-  margin-bottom: 20px;
-
-  &__item {
-    height: 300px;
-
-    @media (min-width: @screen-sm) {
-      height: 400px;
-    }
-
-    @media (min-width: @screen-lg) {
-      height: 500px;
-    }
+.item {
+  height: 300px;
+  
+  @media (min-width: @screen-sm) {
+    height: 400px;
+  }
+  
+  @media (min-width: @screen-lg) {
+    height: 500px;
   }
 }
 
 .slide {
-  &-portrait {
+  &.portrait {
     background: url('slides/4-mobile.jpg') no-repeat top center;
     background-size: cover;
     height: 100%;
@@ -36,7 +31,7 @@
     }
   }
 
-  &-family {
+  &.family {
     background: url('slides/1-mobile.jpg') no-repeat top center;
     background-size: cover;
     height: 100%;
@@ -52,7 +47,7 @@
     }
   }
 
-  &-newborn {
+  &.newborn {
     background: url('slides/2-mobile.jpg') no-repeat top center;
     background-size: cover;
     height: 100%;
@@ -68,7 +63,7 @@
     }
   }
 
-  &-wedding {
+  &.wedding {
     background: url('slides/3-mobile.jpg') no-repeat top center;
     background-size: cover;
     height: 100%;
@@ -84,7 +79,7 @@
     }
   }
 
-  &-event {
+  &.event {
     background: url('slides/5-mobile.jpg') no-repeat top center;
     background-size: cover;
     height: 100%;
@@ -100,7 +95,7 @@
     }
   }
 
-  &-maternity {
+  &.maternity {
     background: url('slides/6-mobile.jpg') no-repeat top center;
     background-size: cover;
     height: 100%;
@@ -117,7 +112,7 @@
   }
 }
 
-.carousel-caption {
+:global(.carousel-caption) {
   position: absolute;
   left: 15%;
   right: 15%;
@@ -149,14 +144,9 @@
     font-size: 21px;
     line-height: 1.4;
   }
-
-  & .btn {
-    text-shadow: none;
-    opacity: 1;
-  }
 }
 
-.carousel-indicators {
+:global(.carousel-indicators) {
   & li {
     display: inline-block;
     width: 10px;
@@ -168,11 +158,42 @@
     cursor: pointer;
     background-color: transparent;
   }
+}
 
-  & .active {
-    margin: 0;
-    width: 12px;
-    height: 12px;
-    background-color: @white;
+:global(.carousel-indicators) :global(.active) {
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  background-color: @white;
+}
+
+:global(.icon-chevron-left) {
+  &::after {
+    content: '';
+  }
+}
+
+.btn {
+  text-shadow: none;
+  opacity: 1;
+  background-color: @pink;
+  display: inline-block;
+  font-family: @font-btn;
+  font-weight: bold;
+  color: @white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+  
+  &:hover {
+    background-color: darken(@pink, 10%);
+    color: @white;
+    opacity: 1;
+  }
+  
+  &:active {
+    opacity: 0.5;
   }
 }

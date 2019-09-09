@@ -1,6 +1,6 @@
 @import '../../styles/variables';
 
-.navigation {
+.root {
   display: none;
   flex-flow: column wrap;
   align-items: center;
@@ -11,45 +11,6 @@
   line-height: 52px;
   list-style: none;
 
-  &__item {
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid rgba(18, 16, 33, 0.09);
-    display: block;
-    font-size: 21px;
-    font-weight: 500;
-    padding: 4px 100px;
-
-    &:first-child {
-      border-top: 1px solid rgba(18, 16, 33, 0.09);
-    }
-
-    &:active,
-    &:hover,
-    &.selected {
-      color: @pink;
-      text-decoration: none;
-    }
-
-    &:hover {
-      opacity: 0.6;
-    }
-  }
-
-  @media (max-width: @screen-md) {
-    &_open {
-      display: flex;
-      position: absolute;
-      top: @header-height;
-      left: 0;
-      right: 0;
-      padding: 0;
-      width: 100%;
-      z-index: @app-menu-zindex;
-      justify-content: flex-start;
-    }
-  }
-
   @media (min-width: @screen-md) {
     display: flex;
     flex-flow: row nowrap;
@@ -58,19 +19,57 @@
     line-height: 26px;
     width: 100%;
     margin: 0 auto auto;
+  }
+}
 
-    &__item {
-      text-decoration: none;
-      color: @black;
-      padding: 10px 4px;
-      transition: color 0.2s linear;
-      border: none;
-      font-size: 17px;
-
-      &:first-child {
-        border-top: none;
-      }
+.item {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid rgba(18, 16, 33, 0.09);
+  display: block;
+  font-size: 21px;
+  font-weight: 500;
+  padding: 4px 100px;
+  
+  &:first-child {
+    border-top: 1px solid rgba(18, 16, 33, 0.09);
+  }
+  
+  &:active,
+  &:hover,
+  &.selected {
+    color: @pink;
+    text-decoration: none;
+  }
+  
+  &:hover {
+    opacity: 0.6;
+  }
+  
+  @media (min-width: @screen-md) {
+    text-decoration: none;
+    color: @black;
+    padding: 10px 4px;
+    transition: color 0.2s linear;
+    border: none;
+    font-size: 17px;
+  
+    &:first-child {
+      border-top: none;
     }
   }
 }
 
+.open {
+  @media (max-width: @screen-md) {
+    display: flex;
+    position: absolute;
+    top: @header-height;
+    left: 0;
+    right: 0;
+    padding: 0;
+    width: 100%;
+    z-index: @app-menu-zindex;
+    justify-content: flex-start;
+  }
+}

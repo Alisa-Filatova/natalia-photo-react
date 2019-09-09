@@ -4,7 +4,7 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import { AppFooter, AppHeader } from '../index';
 import NotFound from '../../routes/NotFound/NotFound';
 import Routes from '../../routes';
-import './App.less';
+import styles from './App.less';
 
 class App extends React.PureComponent {
   constructor(props) {
@@ -23,20 +23,20 @@ class App extends React.PureComponent {
     const { isOpenMenu } = this.state;
 
     return (
-      <div className="main">
+      <div className={styles.root}>
         <Helmet>
           <title>Natalia Biriouk - Photography</title>
           <meta name="description" content="Natalia Biriouk Photography in California!" />
           <meta name="keywords" content="Natalia Biriouk photography California USA Wedding Newborn Event portfolio portrait photo photoshoot family images" />
           <meta name="author" content="Alisa Filatova, alicedesign.ru" />
         </Helmet>
-        <div className="page">
+        <main className={styles.page}>
           <AppHeader
             isOpenMenu={isOpenMenu}
             onMenuButtonClick={this.onMenuButtonClick}
             pathname={this.props.location.pathname}
           />
-          <div className="page-content">
+          <div className={styles.pageContent}>
             <Switch>
               {Routes.map(route => (
                 <Route
@@ -50,7 +50,7 @@ class App extends React.PureComponent {
             </Switch>
           </div>
           <AppFooter />
-        </div>
+        </main>
       </div>
     );
   }

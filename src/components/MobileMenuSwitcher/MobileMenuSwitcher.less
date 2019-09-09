@@ -1,6 +1,6 @@
 @import '../../styles/variables';
 
-.menu-wrapper {
+.root {
   position: absolute;
   top: @header-height / 2;
   transform: translateY(-50%);
@@ -11,26 +11,42 @@
   border: none;
   background-color: transparent;
 
-  .box-item {
-    background: @white;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+  @media (min-width: @screen-md) {
+    display: none;
+  }
+}
 
-    .menu-item {
-      position: relative;
-      display: inline-block;
+.boxItem {
+  background: @white;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  
+  .item {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    cursor: pointer;
+    transition-duration: 0.22s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    
+    .burgerLines {
+      top: 50%;
+      display: block;
+      margin-top: -2px;
+      position: absolute;
       width: 40px;
-      height: 24px;
-      cursor:pointer;
-      transition-duration: 0.22s;
-      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-
-      .burger-lines {
-        top: 50%;
+      height: 4px;
+      transition-timing-function: ease;
+      transition-duration: .15s;
+      transition-property: transform;
+      background-color: @pink;
+      
+      &::after, &::before {
         display: block;
-        margin-top: -2px;
+        content: "";
         position: absolute;
         width: 40px;
         height: 4px;
@@ -38,54 +54,38 @@
         transition-duration: .15s;
         transition-property: transform;
         background-color: @pink;
-
-        &::after, &::before {
-          display: block;
-          content: "";
-          position: absolute;
-          width: 40px;
-          height: 4px;
-          transition-timing-function: ease;
-          transition-duration: .15s;
-          transition-property: transform;
-          background-color: @pink;
-        }
-
-        &::before {
-          transition: top .1s ease-in 0.25s,opacity 0.1s ease-in;
-          top: -10px;
-        }
-
-        &::after {
-          transition: bottom .1s ease-in 0.25s,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
-          bottom: -10px;
-        }
       }
-
-      &.active  {
-        .burger-lines {
-          background-color: @pink;
-          transform: rotate(225deg);
-          transition-delay: 0.12s;
-          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-
-          &::before {
-            top: 0;
-            opacity: 0;
-            transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-          }
-
-          &::after {
-            bottom: 0;
-            transform: rotate(-90deg);
-            transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-          }
+      
+      &::before {
+        transition: top .1s ease-in 0.25s, opacity 0.1s ease-in;
+        top: -10px;
+      }
+      
+      &::after {
+        transition: bottom .1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        bottom: -10px;
+      }
+    }
+    
+    &.active {
+      .burgerLines {
+        background-color: @pink;
+        transform: rotate(225deg);
+        transition-delay: 0.12s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        
+        &::before {
+          top: 0;
+          opacity: 0;
+          transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+        }
+        
+        &::after {
+          bottom: 0;
+          transform: rotate(-90deg);
+          transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
       }
     }
-  }
-
-  @media (min-width: @screen-md) {
-    display: none;
   }
 }

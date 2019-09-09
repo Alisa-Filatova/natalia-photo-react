@@ -2,22 +2,22 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Photo from './about-desktop.png';
 import Routes from '../index';
-import './AboutMe.less';
+import styles from './AboutMe.less';
 
 const AboutMe = () => (
-  <section className="about-me">
-    <div className="about-me__photo-box">
-      <img className="about-me__photo" src={Photo} alt="" />
+  <section className={styles.root}>
+    <div className={styles.photoBox}>
+      <img className={styles.photo} src={Photo} alt="" />
     </div>
-    <div className="about-me__description">
-    <h2 className="about-me__title">Hello, I am Natalia! Welcome to my world!</h2>
-    <p className="about-me__text">
+    <div className={styles.description}>
+    <h2 className={styles.title}>Hello, I am Natalia! Welcome to my world!</h2>
+    <p>
       I am a creative newborn, children, family portrait and wedding
       photographer based in a beautiful nature in California that
       enjoys working at home!<br/>
       I have shot children, family portraits and other events all over the California.
     </p>
-    <p className="about-me__text">
+    <p>
       I am a happy, creative person that loves to make beautiful, natural,
       soft, romantic and thoughtful images that reflect my artistic style.<br/>
       I am a wife to one of americans finest, a mum to a two beautiful girls
@@ -27,7 +27,7 @@ const AboutMe = () => (
       I love a happy home full of flowers, candles, laughter, life and
       lots of music.
     </p>
-    <p className="about-me__text">
+    <p>
       After working hard to get better and better with my camera,
       I decided to turn my passion of photography into a business.
       I never get tired of capturing a family's love or hearing the laughs of
@@ -37,10 +37,10 @@ const AboutMe = () => (
       your home that will fill you with tiny, captured memories that will last
       a lifetime...
     </p>
-    <p className="about-me__text">
+    <p>
       Please feel free to look through my portfolio for a taste of my work.
       If you are interested in booking a shoot, please just drop me a message on
-      my <NavLink className="base-link about-me__link" to={Routes[8].path}>Contact</NavLink> page.
+      my <NavLink className={styles.link} to={Routes[8].path}>Contact</NavLink> page.
     </p>
     </div>
   </section>

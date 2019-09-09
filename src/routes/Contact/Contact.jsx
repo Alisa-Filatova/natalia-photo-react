@@ -5,49 +5,11 @@ import Phone from './images/phone.svg';
 import Mail from './images/mail.svg';
 import Sign from './images/sign.svg';
 import API from '../../api';
-import './Contact.less';
+import styles from './Contact.less';
 
 const PHONE_NUMBER = '7-609-164-258';
 const EMAIL = 'nata_vis@mail.ru';
 const api = new API();
-
-const FORM_FIELDS = [
-  {
-    type: 'text',
-    name: 'name',
-    placeholder: 'Your name',
-    required: true,
-    action: this.onNameChange,
-  },
-  {
-    type: 'email',
-    name: 'email',
-    placeholder: 'E-mail',
-    required: true,
-    action: this.onEmailChange,
-  },
-  {
-    type: 'tel',
-    name: 'phone',
-    placeholder: 'Phone',
-    required: false,
-    action: this.onTelChange,
-  },
-  {
-    type: 'text',
-    name: 'location',
-    placeholder: 'Event location',
-    required: false,
-    action: this.onLocationChange,
-  },
-  {
-    type: 'text',
-    name: 'date',
-    placeholder: 'Event date',
-    required: false,
-    action: this.onDateChange,
-  },
-];
 
 class Contact extends React.PureComponent {
   constructor(props) {
@@ -118,11 +80,49 @@ class Contact extends React.PureComponent {
   };
 
   render() {
+    const FORM_FIELDS = [
+      {
+        type: 'text',
+        name: 'name',
+        placeholder: 'Your name',
+        required: true,
+        action: this.onNameChange,
+      },
+      {
+        type: 'email',
+        name: 'email',
+        placeholder: 'E-mail',
+        required: true,
+        action: this.onEmailChange,
+      },
+      {
+        type: 'tel',
+        name: 'phone',
+        placeholder: 'Phone',
+        required: false,
+        action: this.onTelChange,
+      },
+      {
+        type: 'text',
+        name: 'location',
+        placeholder: 'Event location',
+        required: false,
+        action: this.onLocationChange,
+      },
+      {
+        type: 'text',
+        name: 'date',
+        placeholder: 'Event date',
+        required: false,
+        action: this.onDateChange,
+      },
+    ];
+
     return (
-      <div className="contact">
-        <div className="contact__block">
-          <p className="contact__title">Lets talk...</p>
-          <p className="contact__description">
+      <div className={styles.root}>
+        <div className={styles.block}>
+          <p className={styles.title}>Lets talk...</p>
+          <p className={styles.description}>
             I am based in beautiful California.<br/>
             If you are looking for beautiful,
             romantic, natural light images<br/>
@@ -130,13 +130,11 @@ class Contact extends React.PureComponent {
             Just drop me a message<br/>
             and I will connect to you!
           </p>
-          <p className="contact__second-title">
-            Other ways to get in touch and connect:
-          </p>
-          <p className="contact__text">
-            <a className="base-link" href="tel:7609164258">
+          <p>Other ways to get in touch and connect:</p>
+          <p className={styles.text}>
+            <a href="tel:7609164258">
               <img
-                className="icon icon_phone"
+                className={styles.icon}
                 src={Phone}
                 alt=""
                 width="20"
@@ -145,10 +143,10 @@ class Contact extends React.PureComponent {
               {PHONE_NUMBER}
             </a>
           </p>
-          <p className="contact__text">
-            <a className="base-link" href={`mailto:${EMAIL}`}>
+          <p className={styles.text}>
+            <a href={`mailto:${EMAIL}`}>
               <img
-                className="icon icon_mail"
+                className={styles.icon}
                 src={Mail}
                 alt=""
                 width="30"
@@ -157,7 +155,7 @@ class Contact extends React.PureComponent {
               {EMAIL}
             </a>
           </p>
-          <div className="postImage">
+          <div className={styles.postImage}>
             <img
               src={Post}
               alt=""

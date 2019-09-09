@@ -1,8 +1,8 @@
 import React from 'react';
-import './Overlay.less';
+import styles from './Overlay.less';
 
 const Overlay = (props) => {
-  return <div className="overlay" onClick={props.onClick} />
+  return <div className={styles.root} onClick={props.onClick} />
 };
 
 export default Overlay;

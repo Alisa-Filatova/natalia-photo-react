@@ -1,9 +1,10 @@
 import React from 'react';
-import './Button.less';
+import classNames from 'classnames';
+import styles from './Button.less';
 
 const Button = ({className, onClick, type = 'text', name, text}) => (
   <input
-    className={`btn ${className}`}
+    className={classNames(styles.root, className)}
     onClick={onClick}
     type={type}
     name={name}
