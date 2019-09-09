@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactForm } from '../../components';
+import { ContactForm, MetaTags } from '../../components';
 import Post from './images/post.svg';
 import Phone from './images/phone.svg';
 import Mail from './images/mail.svg';
@@ -120,6 +120,7 @@ class Contact extends React.PureComponent {
 
     return (
       <div className={styles.root}>
+        <MetaTags title="Contact" />
         <div className={styles.block}>
           <p className={styles.title}>Lets talk...</p>
           <p className={styles.description}>

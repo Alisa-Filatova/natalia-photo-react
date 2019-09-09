@@ -34,7 +34,7 @@ const SLIDES = [
 const Carousel = () => (
   <ReactBootstrapCarousel
     version={4}
-    slideshowSpeed={6000}
+    slideshowSpeed={4000}
   >
     {SLIDES.map((slide) =>
       <div

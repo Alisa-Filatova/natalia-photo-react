@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { MetaTags } from '../../components';
 import Photo from './about-desktop.png';
 import Routes from '../index';
 import styles from './AboutMe.less';
 
 const AboutMe = () => (
   <section className={styles.root}>
+    <MetaTags title="About me" />
     <div className={styles.photoBox}>
       <img className={styles.photo} src={Photo} alt="" />
     </div>
