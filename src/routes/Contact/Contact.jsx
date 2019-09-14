@@ -5,10 +5,9 @@ import Phone from './images/phone.svg';
 import Mail from './images/mail.svg';
 import Sign from './images/sign.svg';
 import API from '../../api';
+import { EMAIL, PHONE_NUMBER } from '../../constants';
 import styles from './Contact.less';
 
-const PHONE_NUMBER = '7-609-164-258';
-const EMAIL = 'nata_vis@mail.ru';
 const api = new API();
 
 class Contact extends React.PureComponent {
