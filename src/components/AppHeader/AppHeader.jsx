@@ -3,22 +3,24 @@ import { NavLink } from 'react-router-dom';
 import Routes from '../../routes';
 import Logo from './images/logo.svg';
 import LogoCompact from './images/logo-compact.svg';
-import LogoCompactXs from './images/logo-compact-xs.svg';
 import { MobileMenuSwitcher, NavigationMenu } from '../index';
 import classNames from 'classnames';
 import styles from './AppHeader.less';
 
 const AppHeader = (props) => (
-  <header className={classNames(styles.root, props.isOpenMenu && styles.opened)}>
+  <header className={
+    classNames(
+      styles.root,
+      props.isOpenMenu && styles.opened
+    )
+  }
+  >
     <NavLink
       className={styles.logo}
       to={Routes[0].path}
+      onClick={props.onLogoClick}
     >
       <picture>
-        <source
-          media="(max-width:425px)"
-          srcSet={LogoCompactXs}
-        />
         <source
           media="(max-width:1024px)"
           srcSet={LogoCompact}

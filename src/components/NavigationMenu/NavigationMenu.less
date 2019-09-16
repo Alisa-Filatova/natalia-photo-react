@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   background-color: @white;
   margin-bottom: 0;
-  line-height: 52px;
+  line-height: 2.2;
   list-style: none;
 
   @media (min-width: @screen-md) {
@@ -27,7 +27,7 @@
   text-align: center;
   border-bottom: 1px solid rgba(18, 16, 33, 0.09);
   display: block;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 500;
   padding: 4px 100px;
   
@@ -35,15 +35,9 @@
     border-top: 1px solid rgba(18, 16, 33, 0.09);
   }
   
-  &:active,
-  &:hover,
   &.selected {
     color: @pink;
     text-decoration: none;
-  }
-  
-  &:hover {
-    opacity: 0.6;
   }
   
   @media (min-width: @screen-md) {
@@ -56,6 +50,12 @@
   
     &:first-child {
       border-top: none;
+    }
+  
+    &:active,
+    &:hover {
+      color: @pink;
+      text-decoration: none;
     }
   }
 }

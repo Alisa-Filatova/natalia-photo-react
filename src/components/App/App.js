@@ -19,6 +19,10 @@ class App extends React.PureComponent {
     this.setState({ isOpenMenu: !this.state.isOpenMenu})
   };
 
+  onLogoClick = () => {
+    this.setState({ isOpenMenu: false })
+  };
+
   render() {
     const { isOpenMenu } = this.state;
 
@@ -35,6 +39,7 @@ class App extends React.PureComponent {
             isOpenMenu={isOpenMenu}
             onMenuButtonClick={this.onMenuButtonClick}
             pathname={this.props.location.pathname}
+            onLogoClick={this.onLogoClick}
           />
           <div className={styles.pageContent}>
             <Switch>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { MetaTags } from '../../components';
+import { MetaTags, ScrollToTopOnMount } from '../../components';
 import Photo from './about-desktop.png';
 import Routes from '../index';
 import styles from './AboutMe.less';
@@ -8,6 +8,7 @@ import styles from './AboutMe.less';
 const AboutMe = () => (
   <section className={styles.root}>
     <MetaTags title="About me" />
+    <ScrollToTopOnMount />
     <div className={styles.photoBox}>
       <img className={styles.photo} src={Photo} alt="" />
     </div>

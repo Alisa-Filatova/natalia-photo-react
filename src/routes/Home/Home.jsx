@@ -1,6 +1,11 @@
 import React from 'react';
-import { Carousel } from '../../components';
+import { Carousel, ScrollToTopOnMount } from '../../components';
 
-const Home = () => <Carousel />;
+const Home = () => (
+	<>
+		<ScrollToTopOnMount />
+		<Carousel />
+	</>
+);
 
 export default Home;

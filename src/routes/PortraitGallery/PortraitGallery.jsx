@@ -1,10 +1,11 @@
 import React from 'react';
-import { Gallery, MetaTags }  from '../../components';
+import { Gallery, MetaTags, ScrollToTopOnMount } from '../../components';
 import PORTRAIT from './portrait.json';
 
 const PortraitGallery = () => (
   <>
     <MetaTags title="Portrait" />
+    <ScrollToTopOnMount />
     <Gallery
       images={PORTRAIT}
       enableImageSelection={false}

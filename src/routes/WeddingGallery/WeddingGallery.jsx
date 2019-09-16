@@ -1,11 +1,12 @@
 import React from 'react';
 import Gallery from 'react-grid-gallery';
-import { MetaTags } from '../../components';
+import { MetaTags, ScrollToTopOnMount } from '../../components';
 import WEDDING from './wedding.json';
 
 const WeddingGallery = () => (
   <>
     <MetaTags title="Wedding" />
+    <ScrollToTopOnMount />
     <Gallery
       images={WEDDING}
       enableImageSelection={false}
