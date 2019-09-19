@@ -5,11 +5,21 @@ import classNames from 'classnames';
 import styles from './NavigationMenu.less';
 
 const NavigationMenu = (props) => (
-  <nav className={classNames(styles.root, props.isOpenMenu && styles.open)}>
+  <nav className={
+    classNames(
+      styles.root,
+      props.isOpenMenu && styles.open
+    )}
+  >
     {Routes.map((item) => (
       <Link
         key={item.title}
-        className={classNames(styles.item, item.path === props.location && styles.selected)}
+        className={
+          classNames(
+            styles.item,
+            item.path === props.location && styles.selected
+          )
+        }
         to={item.path}
         onClick={props.onMenuButtonClick}
       >

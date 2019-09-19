@@ -4,6 +4,7 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import { AppFooter, AppHeader } from '../index';
 import NotFound from '../../routes/NotFound/NotFound';
 import Routes from '../../routes';
+import { SITE_NAME, AUTHOR_SITE, AUTHOR_NAME, SITE_TITLE } from '../../constants';
 import styles from './App.less';
 
 class App extends React.PureComponent {
@@ -16,11 +17,11 @@ class App extends React.PureComponent {
   }
 
   onMenuButtonClick = () => {
-    this.setState({ isOpenMenu: !this.state.isOpenMenu})
+    this.setState({ isOpenMenu: !this.state.isOpenMenu });
   };
 
   onLogoClick = () => {
-    this.setState({ isOpenMenu: false })
+    this.setState({ isOpenMenu: false });
   };
 
   render() {
@@ -29,10 +30,10 @@ class App extends React.PureComponent {
     return (
       <div className={styles.root}>
         <Helmet>
-          <title>nataliaphoto.me</title>
-          <meta name="description" content="Natalia Biriouk Photography in California!" />
-          <meta name="keywords" content="Natalia Biriouk photography California USA Wedding Newborn Event portfolio portrait photo photoshoot family images" />
-          <meta name="author" content="Alisa Filatova, alicedesign.ru" />
+          <title>{SITE_NAME}</title>
+          <meta name="description" content={`${SITE_TITLE} in California!`} />
+          <meta name="keywords" content={`${SITE_TITLE} California USA Wedding Newborn Event portfolio portrait photo photoshoot family images`} />
+          <meta name="author" content={`${AUTHOR_NAME}, ${AUTHOR_SITE}`} />
         </Helmet>
         <main className={styles.page}>
           <AppHeader

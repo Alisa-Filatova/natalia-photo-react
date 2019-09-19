@@ -2,15 +2,18 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Routes from '../../routes';
 import FooterFlowers from './footer.svg';
+import { AUTHOR_SITE } from '../../constants';
 import styles from './AppFooter.less';
-
-const AUTHOR_SITE = 'alicedesign.ru';
 
 const AppFooter = () => (
   <footer className={styles.root}>
     <div>
       <NavLink className={styles.logo} to={Routes[0].path}>
-        <img src={FooterFlowers} height="80" alt="" />
+        <img
+          src={FooterFlowers}
+          height="80"
+          alt=""
+        />
       </NavLink>
       <p className={styles.copyright}>
         ©{new Date().getFullYear()} Natalia Biriouk

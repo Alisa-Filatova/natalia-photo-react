@@ -1,8 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { SITE_NAME } from '../../constants';
 
 const MetaTags = ({ lang, title, description, keywords, image }) => {
-  const titleText = title ? `${title} | nataliaphoto.me` : 'nataliaphoto.me';
+  const titleText = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
 
   const meta = [
     description ? { name: 'description', content: description } : undefined,
