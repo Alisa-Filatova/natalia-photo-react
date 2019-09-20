@@ -9,6 +9,7 @@ import MobileMenuSwitcher from './MobileMenuSwitcher/MobileMenuSwitcher';
 import Overlay from './Overlay/Overlay';
 import MetaTags from './MetaTags/MetaTags';
 import ScrollToTopOnMount from './ScrollToTopOnMount/ScrollToTopOnMount';
+import Loader from './Loader/Loader';
 
 export {
   AppFooter,
@@ -22,4 +23,5 @@ export {
   Overlay,
   MetaTags,
   ScrollToTopOnMount,
+	Loader,
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import { AppFooter, AppHeader } from '../index';
+import { AppFooter, AppHeader, Loader } from '../index';
 import NotFound from '../../routes/NotFound/NotFound';
 import Routes from '../../routes';
 import { SITE_NAME, AUTHOR_SITE, AUTHOR_NAME, SITE_TITLE } from '../../constants';
@@ -13,8 +13,13 @@ class App extends React.PureComponent {
 
     this.state = {
       isOpenMenu: false,
-    }
+      loading: true,
+    };
   }
+
+	componentDidMount() {
+		setTimeout(() => this.setState({ loading: false }), 1500);
+  };
 
   onMenuButtonClick = () => {
     this.setState({ isOpenMenu: !this.state.isOpenMenu });
@@ -25,7 +30,7 @@ class App extends React.PureComponent {
   };
 
   render() {
-    const { isOpenMenu } = this.state;
+    const { isOpenMenu, loading } = this.state;
 
     return (
       <div className={styles.root}>
@@ -35,6 +40,7 @@ class App extends React.PureComponent {
           <meta name="keywords" content={`${SITE_TITLE} California USA Wedding Newborn Event portfolio portrait photo photoshoot family images`} />
           <meta name="author" content={`${AUTHOR_NAME}, ${AUTHOR_SITE}`} />
         </Helmet>
+        {loading && <Loader />}
         <main className={styles.page}>
           <AppHeader
             isOpenMenu={isOpenMenu}
