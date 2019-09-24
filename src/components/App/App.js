@@ -18,8 +18,12 @@ class App extends React.PureComponent {
   }
 
 	componentDidMount() {
-		setTimeout(() => this.setState({ loading: false }), 1500);
+		this.timerID = setTimeout(() => this.setState({ loading: false }), 1000);
   };
+
+	componentWillUnmount() {
+		clearInterval(this.timerID);
+	};
 
   onMenuButtonClick = () => {
     this.setState({ isOpenMenu: !this.state.isOpenMenu });
